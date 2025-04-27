@@ -3547,3 +3547,31 @@ button,
   margin: 0;
 }
 
+/*Strategic Aims*/
+.principles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Strategic Aims specific positioning */
+.aims-card {
+  grid-column: 1 / -1; /* Makes it span full width */
+  justify-self: center; /* Centers the card horizontally */
+  max-width: 800px; /* Limits maximum width for better readability */
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .principles-container {
+      grid-template-columns: repeat(3, 1fr); /* Creates 3 columns for first row */
+  }
+  
+  .aims-card {
+      grid-column: 2; /* Centers in the middle column */
+      max-width: 600px;
+  }
+}
+
