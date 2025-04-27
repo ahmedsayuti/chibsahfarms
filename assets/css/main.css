@@ -2125,67 +2125,44 @@ button,
 /* Full Bleed Slideshow CSS */
 .full-bleed-slideshow {
   position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin: 0 -50vw !important;
-  padding: 0;
   overflow: hidden;
-  z-index: 1;
+  width: 100%;
 }
 
 .slideshow-container {
   position: relative;
   width: 100%;
-  height: 80vh; /* Adjust height as needed */
-  min-height: 500px;
+  height: 0;
+  padding-top: 56.25%; /* 16:9 aspect ratio (adjust this percentage based on your images' proportions) */
 }
 
 .slide {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.slide.active {
-  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* This preserves aspect ratio while covering container */
   object-position: center;
-  /* Stretch images beyond container edges */
-  margin: 0 -5%;
-  width: 110%;
-  max-width: none;
 }
 
-/* Mobile Optimization */
-@media (max-width: 768px) {
-  .slideshow-container {
-      height: 60vh;
-      min-height: 300px;
-  }
-  
-  .slide img {
-      margin: 0 -2%;
-      width: 104%;
-  }
+/* Add these styles for the active slide and navigation controls */
+.slide.active {
+  opacity: 1;
 }
 
-@media (max-width: 480px) {
-  .slideshow-container {
-      height: 50vh;
-  }
-  
-  .slide img {
-      margin: 0;
-      width: 100%;
-  }
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* rest of your button styles */
 }
 /* Footer */
 #footer .copyright {
@@ -2763,5 +2740,9 @@ button,
 
 
 
-
+#header .icons li a.icon {
+  font-size: 1.5em !important;
+  /* or */
+  transform: scale(2);
+}
 
