@@ -2744,5 +2744,806 @@ button,
   transform: scale(2);
 }
 
+/* Avocado Page */
+.avocado-hero {
+  position: relative;
+  padding: 4rem 0;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/avocado-hero.jpg');
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
 
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover .card-hover {
+  opacity: 1;
+}
+
+.timeline-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  position: relative;
+}
+
+.timeline-event {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-left: 4px solid #4CAF50;
+  position: relative;
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.cert-card {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+}
+
+.cta-section {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+
+/* Grain page */
+/* Grain Specific Styles */
+.grain-hero {
+  background: linear-gradient(45deg, rgba(126,87,16,0.8), rgba(242,188,27,0.8)),
+              url('images/grain-field.jpg');
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.production-badges {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.badge {
+  background: rgba(255,255,255,0.15);
+  padding: 1.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-10px);
+}
+
+.grain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+.grain-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.grain-card:hover {
+  transform: scale(1.03);
+}
+
+.grain-info {
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  padding: 2rem;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.grain-image:hover .grain-info {
+  transform: translateY(0);
+}
+
+.process-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.process-card {
+  background: #f9f8f3;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid #e4d7b6;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.process-card:hover {
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.eco-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  background: #fffaf0;
+  padding: 4rem;
+}
+
+.chart-bar {
+  height: 40px;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.water-use .chart-bar { background: #2a5a86; }
+.yield-increase .chart-bar { background: #4a7b4d; }
+.soil-health .chart-bar { background: #8a6b3d; }
+
+.export-map {
+  position: relative;
+  padding: 4rem 0;
+}
+
+.map-point {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0.7; }
+}
+
+/* Poultry Specific Styles */
+
+.poultry-hero {
+  background: linear-gradient(rgba(40, 40, 40, 0.8), 
+              url('images/poultry-farm.jpg'));
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.live-counters {
+  display: flex;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.counter {
+  background: rgba(255, 204, 0, 0.15);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.counter:hover {
+  transform: scale(1.05);
+}
+
+.product-showcase {
+  background: #fff8f0;
+  padding: 4rem 0;
+}
+
+.product-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.tab {
+  padding: 1rem 2rem;
+  border: none;
+  background: #ffe4cc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background: #ff9933;
+  color: white;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 2rem;
+  transition: bottom 0.5s ease;
+}
+
+.product-image:hover .product-overlay {
+  bottom: 0;
+}
+
+.process-wheel {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  border: 2px solid #ff9933;
+  border-radius: 50%;
+}
+
+.process-step {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: white;
+  border-radius: 15px;
+  transform: rotate(var(--angle)) translate(300px) rotate(calc(-1 * var(--angle)));
+  transition: transform 0.5s ease;
+}
+
+.quality-check {
+  background: #fff;
+  padding: 4rem 0;
+}
+
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.temperature-gauge {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#ff4444 0%, #44ff44 100%);
+  animation: tempChange 3s infinite alternate;
+}
+
+@keyframes tempChange {
+  0% { background: conic-gradient(#ff4444 0%, #44ff44 10%); }
+  100% { background: conic-gradient(#ff4444 0%, #44ff44 90%); }
+}
+
+.poultry-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.gallery-caption {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 153, 51, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.5s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+  top: 0;
+}
+
+/* Livestock Specific Styles */
+.livestock-hero {
+  background: linear-gradient(rgba(67, 40, 24, 0.8), url('images/livestock-header.jpg'));
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.herd-counters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.counter {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+}
+
+.counter:hover {
+  transform: translateY(-10px);
+}
+
+.breed-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2rem 0;
+}
+
+.breed-card {
+  scroll-snap-align: start;
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.breed-card:hover {
+  transform: scale(1.03);
+}
+
+.breed-info {
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.stat-bar {
+  height: 8px;
+  background: #8b5e3c;
+  margin: 0.5rem 0;
+}
+
+.grazing-map {
+  background: #f5efe9;
+  padding: 4rem 0;
+}
+
+.map-interface {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.pasture-sector {
+  position: absolute;
+  border: 3px solid #8b5e3c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pasture-sector:hover {
+  background: rgba(139, 94, 60, 0.2);
+}
+
+.health-monitor {
+  background: #fff;
+  padding: 4rem 0;
+}
+
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.metric-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #8b5e3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.eco-impact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #4a3123;
+  color: white;
+  padding: 4rem;
+}
+
+.impact-bubble {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #a78b73;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+/* Add Sheep-Specific Styles */
+.sheep-breed {
+  border-left: 5px solid #8b5e3c;
+}
+
+.pasture-sector.sheep {
+  border-color: #6b8c42;
+  background: rgba(107, 140, 66, 0.1);
+}
+
+.pasture-sector.sheep:hover {
+  background: rgba(107, 140, 66, 0.3);
+}
+
+.sheep-health .metric-circle {
+  border-color: #6b8c42;
+}
+
+.species-selector {
+  margin-bottom: 1.5rem;
+}
+
+.species {
+  padding: 0.5rem 1rem;
+  border: 2px solid #8b5e3c;
+  margin-right: 0.5rem;
+  background: none;
+  cursor: pointer;
+}
+
+.species.active {
+  background: #8b5e3c;
+  color: white;
+}
+
+.timeline-event.sheep {
+  background: #6b8c42;
+  color: white;
+}
+
+/* Update Breed Carousel */
+.breed-carousel {
+  scrollbar-color: #8b5e3c #f5efe9;
+}
+
+/* Add Sheep Icons */
+.fa-sheep::before {
+  content: "🐑";
+  font-style: normal;
+}
+
+/* FAQ page*/
+.faq-section {
+  background: #f5efe9;
+  padding: 4rem 2rem;
+}
+
+.faq-header {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.search-filter {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.faq-search {
+  padding: 1rem;
+  border: 2px solid #8b5e3c;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.category-filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: #fff;
+  border: 2px solid #8b5e3c;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background: #8b5e3c;
+  color: white;
+}
+
+.faq-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.faq-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #fffaf0;
+}
+
+.toggle-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-card.active .faq-answer {
+  max-height: 1000px;
+}
+
+.faq-card.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.practice-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat {
+  background: #f5efe9;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.tour-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tour-card {
+  border: 2px solid #8b5e3c;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.distribution-map {
+  position: relative;
+  height: 300px;
+  background: url('images/ghana-map.png');
+  background-size: contain;
+}
+
+.map-point {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  background: #8b5e3c;
+  color: white;
+  border-radius: 20px;
+}
+
+.pulse-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 0.4; }
+  100% { transform: scale(0.8); opacity: 0.7; }
+}
+
+.faq-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #8b5e3c;
+  color: white;
+  border-radius: 12px;
+}
+
+.cta-button {
+  background: #6b8c42;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+
+
+
+/* Images on Avocado*/
+.features-grid {
+  /* Ensure grid layout is properly defined */
+  display: grid;
+  gap: 2rem;
+}
+
+.feature-card {
+  /* Maintain consistent card sizing */
+  overflow: hidden;
+}
+
+.card-image {
+  /* Create a contained box for the image */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 200px; /* Adjust this value based on your needs */
+}
+
+.card-image img {
+  /* Ensure image fills container while maintaining aspect ratio */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This prevents stretching */
+  display: block;
+  transition: transform 0.3s ease; /* Optional for hover effects */
+}
+
+/* Optional: Add hover effect */
+.card-image:hover img {
+  transform: scale(1.05);
+}
+
+/*Certification images on avocado page*/
+.certification-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.cert-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-card img {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: contain; /* Ensures full image visibility */
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.cert-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
 

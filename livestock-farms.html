@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Livestock Farms</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+					<!-- Basic Favicon -->
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="shortcut icon" href="/favicon.ico">
+		
+		<!-- Apple Devices -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		
+		<!-- Android/Chrome -->
+		<link rel="manifest" href="/site.webmanifest">
+		
+		<!-- Microsoft Tiles -->
+		<meta name="msapplication-config" content="/browserconfig.xml">
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><img src="images/logo.png" alt="Chibsah Farms Logo"></a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+								<!-- Updated Hero Section with Sheep Counter -->
+<section class="livestock-hero">
+    <div class="hero-overlay">
+        <h1>Chibsah Ethical Livestock</h1>
+        <p>Humane Animal Husbandry & Sustainable Grazing Practices</p>
+        <div class="herd-counters">
+            <div class="counter">
+                <i class="fas fa-cow"></i>
+                <span class="count" data-target="1200">0</span>
+                <span>Free-Range Cattle</span>
+            </div>
+            <div class="counter">
+                <i class="fas fa-sheep"></i>
+                <span class="count" data-target="2500">0</span>
+                <span>Pasture-Raised Sheep</span>
+            </div>
+            <div class="counter">
+                <i class="fas fa-pastafarianism"></i>
+                <span class="count" data-target="5000">0</span>
+                <span>Acres of Pasture</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Updated Breed Carousel with Sheep Breeds -->
+<section class="breed-showcase">
+    <h2>Our Heritage Breeds</h2>
+    <div class="breed-carousel">
+        <!-- Cattle Breed -->
+        <div class="breed-card">
+            <img src="images/sanga-cattle.jpg" alt="Sanga Cattle">
+            <div class="breed-info">
+                <h3>Sanga Cattle</h3>
+                <div class="breed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Drought Resistance</span>
+                        <div class="stat-bar" style="width: 90%"></div>
+                    </div>
+                    <button class="genetic-info">View Genetics <i class="fas fa-dna"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- West African Dwarf Sheep -->
+        <div class="breed-card sheep-breed">
+            <img src="images/west-african-sheep.jpg" alt="West African Dwarf Sheep">
+            <div class="breed-info">
+                <h3>West African Dwarf</h3>
+                <div class="breed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Disease Resistance</span>
+                        <div class="stat-bar" style="width: 95%"></div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Wool Quality</span>
+                        <div class="stat-bar" style="width: 75%"></div>
+                    </div>
+                    <button class="genetic-info">View Traits <i class="fas fa-dna"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sahelian Sheep -->
+        <div class="breed-card sheep-breed">
+            <img src="images/sahelian-sheep.jpg" alt="Sahelian Sheep">
+            <div class="breed-info">
+                <h3>Sahelian Sheep</h3>
+                <div class="breed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Heat Tolerance</span>
+                        <div class="stat-bar" style="width: 98%"></div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Growth Rate</span>
+                        <div class="stat-bar" style="width: 85%"></div>
+                    </div>
+                    <button class="genetic-info">View Traits <i class="fas fa-dna"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Updated Grazing Map with Sheep Sectors -->
+<section class="grazing-map">
+    <h2>Rotational Grazing System</h2>
+    <div class="map-interface">
+        <div class="map-visual">
+            <img src="images/grazing-map.jpg" alt="Grazing Areas">
+            <div class="pasture-sector cattle" data-sector="A"></div>
+            <div class="pasture-sector cattle" data-sector="B"></div>
+            <div class="pasture-sector sheep" data-sector="C"></div>
+            <div class="pasture-sector sheep" data-sector="D"></div>
+        </div>
+        <div class="map-controls">
+            <div class="species-selector">
+                <button class="species active" data-species="all">All</button>
+                <button class="species" data-species="cattle">Cattle Only</button>
+                <button class="species" data-species="sheep">Sheep Only</button>
+            </div>
+            <div class="grazing-schedule">
+                <h3>Current Rotation</h3>
+                <div class="schedule-timeline">
+                    <div class="timeline-event sheep" data-days="7">Sector C</div>
+                    <div class="timeline-event cattle" data-days="5">Sector A</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Updated Health Dashboard with Sheep Metrics -->
+<section class="health-monitor">
+    <h2>Real-Time Health Monitoring</h2>
+    <div class="health-grid">
+        <div class="health-card">
+            <div class="vital-graph" id="weightChart"></div>
+            <h3>Cattle Weight Gain</h3>
+            <p>Last 30 Days: +45kg</p>
+        </div>
+        <div class="health-card sheep-health">
+            <div class="health-metric">
+                <div class="metric-circle" data-percent="92">
+                    <span>92%</span>
+                </div>
+                <p>Lamb Survival Rate</p>
+            </div>
+        </div>
+        <div class="health-card sheep-health">
+            <div class="vital-graph" id="woolChart"></div>
+            <h3>Wool Production</h3>
+            <p>Monthly Average: 2.8kg/sheep</p>
+        </div>
+    </div>
+</section>
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+							<section id="search" class="alt">
+								<div class="search-container">
+									<form onsubmit="event.preventDefault(); performSearch();">
+										<input 
+											type="text" 
+											id="searchInput" 
+											name="query" 
+											placeholder="Search farms, products, or articles..."
+											aria-label="Website Search"
+										>
+										<div id="searchResults" class="search-results"></div>
+									</form>
+								</div>
+							</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About Us</a></li>
+										<li><a href="contact.html">Contact Us</a></li>
+										<li>
+											<span class="opener">Our Farms</span>
+											<ul>
+												<li><a href="avocado-farms.html">Avocado Farms</a></li>
+												<li><a href="grain-farms.html">Grain Farms</a></li>
+												<li><a href="poultry-farms.html">Poultry Farms</a></li>
+												<li><a href="livestock-farms.html">Livestock Farms</a></li>
+											</ul>
+										</li>
+										
+										<li><a href="faq.html">FAQ</a></li>
+										<li><a href="#">Privacy Policy</a></li>
+								</nav>
+
+							<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+								<p>Contact us for any of our farm produce</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="#">Info: info@chibsahfarms.com<br>
+										Support: support@chibsahfarms.com</a></li>
+									<li class="icon solid fa-phone">(000) 000-0000</li>
+									<li class="icon solid fa-home"> JV29+FH6, Tse Addo High Street,<br />
+									Accra, Ghana</li>
+								</ul>
+							</section>
+
+							<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; 2025 Chibsah Farms. All rights reserved.</p>
+							</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+<!-- HTML -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Left Section: Logo & Social -->
+        <div class="footer-left">
+            <img src="images/logo.png" alt="Chibsah Farms Logo" class="footer-logo">
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Center Sections: Links -->
+        <div class="footer-center">
+            <div class="link-column">
+                <h4>Our Farms</h4>
+                <ul>
+                    <li><a href="grain.html">Grain Farm</a></li>
+                    <li><a href="poultry.html">Poultry Farm</a></li>
+                    <li><a href="avocado.html">Avocado Farm</a></li>
+                    <li><a href="livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+            
+            <div class="link-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Section: Map -->
+        <div class="footer-right">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.7685312966087!2d-0.13367702656667513!3d5.6011745331969935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf85002c15cbbf%3A0xa1ba040430e91349!2sYAC%20GROUP!5e0!3m2!1sen!2sgh!4v1745158640118!5m2!1sen!2sgh"
+                class="footer-map"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Chibsah Farms | YAC Group Subsidiary</p>
+    </div>
+</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+
+	</body>
+</html>

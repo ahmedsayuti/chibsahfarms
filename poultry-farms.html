@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Poultry Farms</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+					<!-- Basic Favicon -->
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="shortcut icon" href="/favicon.ico">
+		
+		<!-- Apple Devices -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		
+		<!-- Android/Chrome -->
+		<link rel="manifest" href="/site.webmanifest">
+		
+		<!-- Microsoft Tiles -->
+		<meta name="msapplication-config" content="/browserconfig.xml">
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><img src="images/logo.png" alt="Chibsah Farms Logo"></a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+								<!-- Poultry Hero Section -->
+<section class="poultry-hero">
+    <div class="hero-overlay">
+        <h1>Chibsah Premium Poultry</h1>
+        <p>Ghana's Leader in Antibiotic-Free Poultry Production</p>
+        <div class="live-counters">
+            <div class="counter">
+                <i class="fas fa-egg"></i>
+                <span class="count" data-target="85000">0</span>
+                <span>Eggs Daily</span>
+            </div>
+            <div class="counter">
+                <i class="fas fa-drumstick-bite"></i>
+                <span class="count" data-target="12000">0</span>
+                <span>Chickens Weekly</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Showcase -->
+<section class="product-showcase">
+    <div class="product-tabs">
+        <button class="tab active" data-tab="eggs">Free-Range Eggs</button>
+        <button class="tab" data-tab="meat">Pasture-Raised Meat</button>
+    </div>
+
+    <div class="tab-content active" id="eggs">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/egg-crates.jpg" alt="Egg Crates">
+                <div class="product-overlay">
+                    <h3>Nutrition Facts</h3>
+                    <ul class="nutrition-list">
+                        <li>Omega-3: 150mg</li>
+                        <li>Protein: 6g</li>
+                        <li>Vitamin D: 41IU</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product-actions">
+                <button class="quick-order">Quick Order</button>
+                <button class="view-details">View Certifications</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content" id="meat">
+        <!-- Similar structure for meat products -->
+    </div>
+</section>
+
+<!-- Farming Process -->
+<section class="poultry-process">
+    <h2>Our Ethical Farming Cycle</h2>
+    <div class="process-wheel">
+        <div class="process-step" style="--angle: 0deg">
+            <div class="step-content">
+                <h3>Hatching</h3>
+                <p>Climate-controlled hatcheries</p>
+            </div>
+        </div>
+        <div class="process-step" style="--angle: 90deg">
+            <!-- Other steps -->
+        </div>
+        <!-- Add more steps -->
+        <div class="wheel-center"></div>
+    </div>
+</section>
+
+<!-- Quality Assurance -->
+<section class="quality-check">
+    <h2>360° Quality Control</h2>
+    <div class="check-grid">
+        <div class="check-card">
+            <div class="check-visual">
+                <div class="temperature-gauge"></div>
+            </div>
+            <h3>Cold Chain Monitoring</h3>
+            <p>Real-time temperature tracking</p>
+        </div>
+        <!-- Add more quality checks -->
+    </div>
+</section>
+
+<!-- Interactive Gallery -->
+<section class="poultry-gallery">
+    <div class="gallery-container">
+        <div class="gallery-item" data-category="hatchery">
+            <img src="images/hatchery.jpg" alt="Hatchery">
+            <div class="gallery-caption">
+                <h3>Modern Hatchery</h3>
+                <button class="virtual-tour">Virtual Tour</button>
+            </div>
+        </div>
+        <!-- More gallery items -->
+    </div>
+</section>
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+							<section id="search" class="alt">
+								<div class="search-container">
+									<form onsubmit="event.preventDefault(); performSearch();">
+										<input 
+											type="text" 
+											id="searchInput" 
+											name="query" 
+											placeholder="Search farms, products, or articles..."
+											aria-label="Website Search"
+										>
+										<div id="searchResults" class="search-results"></div>
+									</form>
+								</div>
+							</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About Us</a></li>
+										<li><a href="contact.html">Contact Us</a></li>
+										<li>
+											<span class="opener">Our Farms</span>
+											<ul>
+												<li><a href="avocado-farms.html">Avocado Farms</a></li>
+												<li><a href="grain-farms.html">Grain Farms</a></li>
+												<li><a href="poultry-farms.html">Poultry Farms</a></li>
+												<li><a href="livestock-farms.html">Livestock Farms</a></li>
+											</ul>
+										</li>
+										
+										<li><a href="faq.html">FAQ</a></li>
+										<li><a href="#">Privacy Policy</a></li>
+								</nav>
+
+							<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+								<p>Contact us for any of our farm produce</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="#">Info: info@chibsahfarms.com<br>
+										Support: support@chibsahfarms.com</a></li>
+									<li class="icon solid fa-phone">(000) 000-0000</li>
+									<li class="icon solid fa-home"> JV29+FH6, Tse Addo High Street,<br />
+									Accra, Ghana</li>
+								</ul>
+							</section>
+
+							<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; 2025 Chibsah Farms. All rights reserved.</p>
+							</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+<!-- HTML -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Left Section: Logo & Social -->
+        <div class="footer-left">
+            <img src="images/logo.png" alt="Chibsah Farms Logo" class="footer-logo">
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Center Sections: Links -->
+        <div class="footer-center">
+            <div class="link-column">
+                <h4>Our Farms</h4>
+                <ul>
+                    <li><a href="grain.html">Grain Farm</a></li>
+                    <li><a href="poultry.html">Poultry Farm</a></li>
+                    <li><a href="avocado.html">Avocado Farm</a></li>
+                    <li><a href="livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+            
+            <div class="link-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Section: Map -->
+        <div class="footer-right">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.7685312966087!2d-0.13367702656667513!3d5.6011745331969935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf85002c15cbbf%3A0xa1ba040430e91349!2sYAC%20GROUP!5e0!3m2!1sen!2sgh!4v1745158640118!5m2!1sen!2sgh"
+                class="footer-map"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Chibsah Farms | YAC Group Subsidiary</p>
+    </div>
+</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+
+	</body>
+</html>
