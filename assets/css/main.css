@@ -3575,3 +3575,21 @@ button,
   }
 }
 
+/* Phone number specific styling */
+input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Pattern validation styling */
+input:invalid {
+  border-color: #ff4444;
+  box-shadow: 0 0 5px rgba(255, 68, 68, 0.2);
+}
+
+input:valid {
+  border-color: #00C851;
+}
