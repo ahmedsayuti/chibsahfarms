@@ -432,4 +432,56 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    function animateCounter(counterElement, target) {
+        let current = 0;
+        const duration = 2000; // Animation duration in ms
+        const increment = Math.ceil(target / (duration / 20));
+        
+        const updateCount = () => {
+            current += increment;
+            if(current > target) current = target;
+            
+            counterElement.textContent = current.toLocaleString();
+            
+            if(current < target) {
+                requestAnimationFrame(updateCount);
+            }
+        };
+        
+        requestAnimationFrame(updateCount);
+    }
 
+    function initializeCounters() {
+        const counters = document.querySelectorAll('.count');
+        
+        counters.forEach(counter => {
+            const target = parseInt(counter.dataset.target);
+            animateCounter(counter, target);
+        });
+    }
+
+    // Initialize when section comes into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                initializeCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(document.querySelector('.poultry-hero'));
+});
+// Add to existing JavaScript
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.counter').forEach(counter => {
+    counterObserver.observe(counter);
+});

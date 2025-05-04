@@ -2966,33 +2966,290 @@ button,
   100% { transform: scale(0.8); opacity: 0.7; }
 }
 
+/* Hero Section Image Fit */
+.grain-hero {
+  position: relative;
+  overflow: hidden;
+  height: 70vh; /* Adjust based on needs */
+}
+
+.grain-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Grain Varieties Section */
+.grain-varieties {
+  padding: 4rem 2rem;
+}
+
+.grain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grain-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.grain-image {
+  position: relative;
+  height: 300px; /* Fixed height for consistency */
+}
+
+.grain-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grain-image:hover img {
+  transform: scale(1.05);
+}
+
+.grain-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  padding: 2rem;
+}
+
+/* Production Badges */
+.production-badges {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.badge {
+  background: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .grain-hero {
+    height: 50vh;
+  }
+  
+  .grain-image {
+    height: 250px;
+  }
+  
+  .production-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .grain-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.export-map {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 600px; /* Adjust based on your needs */
+}
+
+.base-map {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed from cover to contain to show full map */
+  object-position: center;
+}
+
+.map-point {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  transform: translate(-50%, -50%);
+}
+
+.map-point.africa {
+  top: 65%;
+  left: 48%;
+  background: rgba(255, 193, 7, 0.8);
+}
+
+.map-point.europe {
+  top: 35%;
+  left: 50%;
+  background: rgba(33, 150, 243, 0.8);
+}
+
+.map-point.asia {
+  top: 40%;
+  left: 75%;
+  background: rgba(76, 175, 80, 0.8);
+}
+
+.map-legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.5rem 0;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.africa { background: #ffc107; }
+.dot.europe { background: #2196f3; }
+.dot.asia { background: #4CAF50; }
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.7; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.7; }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 400px;
+  }
+  
+  .map-legend {
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.9rem;
+  }
+}
+
 /* Poultry Specific Styles */
 
 .poultry-hero {
-  background: linear-gradient(rgba(40, 40, 40, 0.8), 
-              url('images/poultry-farm.jpg'));
+  position: relative;
   min-height: 90vh;
   display: flex;
   align-items: center;
-  position: relative;
+  justify-content: center;
+  background: linear-gradient(rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), 
+              url('images/poultry-farm.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
   overflow: hidden;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .live-counters {
   display: flex;
+  justify-content: center;
   gap: 4rem;
   margin-top: 3rem;
+  flex-wrap: wrap;
 }
 
 .counter {
-  background: rgba(255, 204, 0, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 15px;
-  transition: transform 0.3s ease;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  min-width: 200px;
+  text-align: center;
 }
 
 .counter:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.counter i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.count {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .live-counters {
+      gap: 2rem;
+      flex-direction: column;
+  }
+  
+  .counter {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+  }
+  
+  .hero-overlay h1 {
+      font-size: 2rem;
+  }
+  
+  .hero-overlay p {
+      font-size: 1rem;
+  }
+}
+
+.loading-bar {
+  height: 3px;
+  background: rgba(255,255,255,0.2);
+  width: 0;
+  margin: 10px auto;
+  transition: width 2s ease;
+}
+
+.counter.visible .loading-bar {
+  width: 100%;
 }
 
 .product-showcase {
@@ -3051,46 +3308,89 @@ button,
 }
 
 .process-wheel {
-  width: 600px;
-  height: 600px;
-  margin: 0 auto;
   position: relative;
-  border: 2px solid #ff9933;
-  border-radius: 50%;
+  width: 90vmin;
+  height: 90vmin;
+  margin: 2rem auto;
 }
 
 .process-step {
   position: absolute;
-  width: 150px;
-  height: 150px;
-  background: white;
-  border-radius: 15px;
-  transform: rotate(var(--angle)) translate(300px) rotate(calc(-1 * var(--angle)));
-  transition: transform 0.5s ease;
+  width: 25%;
+  height: 25%;
+  left: 37.5%;
+  top: 37.5%;
+  transform: 
+    rotate(var(--angle)) 
+    translate(135%) 
+    rotate(calc(-1 * var(--angle)));
+  transform-origin: center;
+  transition: all 0.3s ease;
 }
 
-.quality-check {
+@keyframes wheel-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes step-rotate {
+  from { transform: rotate(var(--angle)) translate(135%) rotate(calc(-1 * var(--angle))); }
+  to { transform: rotate(calc(var(--angle) + 360deg)) translate(135%) rotate(calc(-1 * var(--angle) - 360deg)); }
+}
+
+.process-wheel:hover {
+  animation: wheel-rotate 40s linear infinite;
+}
+
+.process-wheel:hover .process-step {
+  animation: step-rotate 40s linear infinite;
+}
+.wheel-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: #fff;
-  padding: 4rem 0;
-}
-
-.check-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.temperature-gauge {
-  width: 100px;
-  height: 100px;
   border-radius: 50%;
-  background: conic-gradient(#ff4444 0%, #44ff44 100%);
-  animation: tempChange 3s infinite alternate;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  text-align: center;
 }
 
-@keyframes tempChange {
-  0% { background: conic-gradient(#ff4444 0%, #44ff44 10%); }
-  100% { background: conic-gradient(#ff4444 0%, #44ff44 90%); }
+.wheel-center img {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+}
+
+.wheel-center p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .wheel-center {
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+  }
+  
+  .wheel-center img {
+    width: 50%;
+  }
+  
+  .wheel-center p {
+    font-size: 0.65rem;
+  }
 }
 
 .poultry-gallery {
@@ -3124,6 +3424,139 @@ button,
   top: 0;
 }
 
+/* Poultry Hero Section */
+.poultry-hero {
+  position: relative;
+  min-height: 70vh;
+  overflow: hidden;
+}
+
+.poultry-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Product Showcase */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.product-image {
+  height: 400px;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Farming Process */
+.process-wheel {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.process-step img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Quality Assurance */
+.check-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Interactive Gallery */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 300px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* General Image Rules */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .product-image {
+    height: 300px;
+  }
+  
+  .process-wheel {
+    width: 90vw;
+    height: 90vw;
+  }
+  
+  .gallery-item {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .poultry-hero {
+    min-height: 50vh;
+  }
+  
+  .product-image {
+    height: 250px;
+  }
+  
+  .check-card img {
+    height: 150px;
+  }
+}
+/* Meat specific styling */
+.product-card[data-product="meat"] .product-overlay {
+    background: linear-gradient(rgba(150, 40, 27, 0.9), rgba(150, 40, 27, 0.7));
+}
+
+.product-card[data-product="meat"] .quick-order {
+    background-color: #96281b;
+}
+
+.product-card[data-product="meat"] .view-details {
+    border-color: #96281b;
+}
 /* Livestock Specific Styles */
 .livestock-hero {
   background: linear-gradient(rgba(67, 40, 24, 0.8), url('images/livestock-header.jpg'));
@@ -3593,3 +4026,4 @@ input:invalid {
 input:valid {
   border-color: #00C851;
 }
+
