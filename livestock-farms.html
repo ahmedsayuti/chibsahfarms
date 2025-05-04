@@ -42,143 +42,141 @@
 								</header>
 
 								<!-- Updated Hero Section with Sheep Counter -->
-                        <section class="livestock-hero">
-                            <div class="hero-overlay">
-                                <h1>Chibsah Ethical Livestock</h1>
-                                <p>Humane Animal Husbandry & Sustainable Grazing Practices</p>
-                                <div class="herd-counters">
-                                    <div class="counter">
-                                        <i class="fas fa-cow"></i>
-                                        <span class="count" data-target="1200">0</span>
-                                        <span>Free-Range Cattle</span>
-                                    </div>
-                                    <div class="counter">
-                                        <i class="fas fa-sheep"></i>
-                                        <span class="count" data-target="2500">0</span>
-                                        <span>Pasture-Raised Sheep</span>
-                                    </div>
-                                    <div class="counter">
-                                        <i class="fas fa-pastafarianism"></i>
-                                        <span class="count" data-target="5000">0</span>
-                                        <span>Acres of Pasture</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+<section class="livestock-hero">
+    <div class="hero-overlay">
+        <h1>Chibsah Ethical Livestock</h1>
+        <p>Humane Animal Husbandry & Sustainable Grazing Practices</p>
+        <div class="herd-counters">
+            <div class="counter">
+                <i class="fas fa-cow"></i>
+                <span class="count" data-target="1200">0</span>
+                <span>Free-Range Cattle</span>
+            </div>
+            <div class="counter">
+                <i class="fas fa-sheep"></i>
+                <span class="count" data-target="2500">0</span>
+                <span>Pasture-Raised Sheep</span>
+            </div>
+            <div class="counter">
+                <i class="fas fa-pastafarianism"></i>
+                <span class="count" data-target="5000">0</span>
+                <span>Acres of Pasture</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-                        <!-- Updated Breed Carousel with Sheep Breeds -->
-                        <section class="breed-showcase">
-                            <h2>Our Heritage Breeds</h2>
-                            <div class="breed-carousel">
-                                <!-- Cattle Breed -->
-                                <div class="breed-card">
-                                    <img src="images/sanga-cattle.jpg" alt="Sanga Cattle">
-                                    <div class="breed-info">
-                                        <h3>Sanga Cattle</h3>
-                                        <div class="breed-stats">
-                                            <div class="stat">
-                                                <span class="stat-label">Drought Resistance</span>
-                                                <div class="stat-bar" style="width: 90%"></div>
-                                            </div>
-                                            <button class="genetic-info">View Genetics <i class="fas fa-dna"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- West African Dwarf Sheep -->
-                                <div class="breed-card sheep-breed">
-                                    <img src="images/west-african-sheep.jpg" alt="West African Dwarf Sheep">
-                                    <div class="breed-info">
-                                        <h3>West African Dwarf</h3>
-                                        <div class="breed-stats">
-                                            <div class="stat">
-                                                <span class="stat-label">Disease Resistance</span>
-                                                <div class="stat-bar" style="width: 95%"></div>
-                                            </div>
-                                            <div class="stat">
-                                                <span class="stat-label">Wool Quality</span>
-                                                <div class="stat-bar" style="width: 75%"></div>
-                                            </div>
-                                            <button class="genetic-info">View Traits <i class="fas fa-dna"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Sahelian Sheep -->
-                                <div class="breed-card sheep-breed">
-                                    <img src="images/sahelian-sheep.jpg" alt="Sahelian Sheep">
-                                    <div class="breed-info">
-                                        <h3>Sahelian Sheep</h3>
-                                        <div class="breed-stats">
-                                            <div class="stat">
-                                                <span class="stat-label">Heat Tolerance</span>
-                                                <div class="stat-bar" style="width: 98%"></div>
-                                            </div>
-                                            <div class="stat">
-                                                <span class="stat-label">Growth Rate</span>
-                                                <div class="stat-bar" style="width: 85%"></div>
-                                            </div>
-                                            <button class="genetic-info">View Traits <i class="fas fa-dna"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Updated Grazing Map with Sheep Sectors -->
-                        <section class="grazing-map">
-                            <h2>Rotational Grazing System</h2>
-                            <div class="map-interface">
-                                <div class="map-visual">
-                                    <img src="images/grazing-map.jpg" alt="Grazing Areas">
-                                    <div class="pasture-sector cattle" data-sector="A"></div>
-                                    <div class="pasture-sector cattle" data-sector="B"></div>
-                                    <div class="pasture-sector sheep" data-sector="C"></div>
-                                    <div class="pasture-sector sheep" data-sector="D"></div>
-                                </div>
-                                <div class="map-controls">
-                                    <div class="species-selector">
-                                        <button class="species active" data-species="all">All</button>
-                                        <button class="species" data-species="cattle">Cattle Only</button>
-                                        <button class="species" data-species="sheep">Sheep Only</button>
-                                    </div>
-                                    <div class="grazing-schedule">
-                                        <h3>Current Rotation</h3>
-                                        <div class="schedule-timeline">
-                                            <div class="timeline-event sheep" data-days="7">Sector C</div>
-                                            <div class="timeline-event cattle" data-days="5">Sector A</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Updated Health Dashboard with Sheep Metrics -->
-                        <section class="health-monitor">
-                            <h2>Real-Time Health Monitoring</h2>
-                            <div class="health-grid">
-                                <div class="health-card">
-                                    <div class="vital-graph" id="weightChart"></div>
-                                    <h3>Cattle Weight Gain</h3>
-                                    <p>Last 30 Days: +45kg</p>
-                                </div>
-                                <div class="health-card sheep-health">
-                                    <div class="health-metric">
-                                        <div class="metric-circle" data-percent="92">
-                                            <span>92%</span>
-                                        </div>
-                                        <p>Lamb Survival Rate</p>
-                                    </div>
-                                </div>
-                                <div class="health-card sheep-health">
-                                    <div class="vital-graph" id="woolChart"></div>
-                                    <h3>Wool Production</h3>
-                                    <p>Monthly Average: 2.8kg/sheep</p>
-                                </div>
-                            </div>
-                        </section>
+<!-- Updated Breed Carousel with Sheep Breeds -->
+<section class="breed-showcase">
+    <h2>Our Heritage Breeds</h2>
+    <div class="breed-carousel">
+        <!-- Cattle Breed -->
+        <div class="breed-card">
+            <img src="images/sanga-cattle.jpg" alt="Sanga Cattle">
+            <div class="breed-info">
+                <h3>Sanga Cattle</h3>
+                <div class="breed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Drought Resistance</span>
+                        <div class="stat-bar" style="width: 90%"></div>
                     </div>
+                    <button class="genetic-info">View Genetics <i class="fas fa-dna"></i></button>
                 </div>
+            </div>
+        </div>
+
+        <!-- West African Dwarf Sheep -->
+        <div class="breed-card sheep-breed">
+            <img src="images/west-african-sheep.jpg" alt="West African Dwarf Sheep">
+            <div class="breed-info">
+                <h3>West African Dwarf</h3>
+                <div class="breed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Disease Resistance</span>
+                        <div class="stat-bar" style="width: 95%"></div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Wool Quality</span>
+                        <div class="stat-bar" style="width: 75%"></div>
+                    </div>
+                    <button class="genetic-info">View Traits <i class="fas fa-dna"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sahelian Sheep -->
+        <div class="breed-card sheep-breed">
+            <img src="images/sahelian-sheep.jpg" alt="Sahelian Sheep">
+            <div class="breed-info">
+                <h3>Sahelian Sheep</h3>
+                <div class="breed-stats">
+                    <div class="stat">
+                        <span class="stat-label">Heat Tolerance</span>
+                        <div class="stat-bar" style="width: 98%"></div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Growth Rate</span>
+                        <div class="stat-bar" style="width: 85%"></div>
+                    </div>
+                    <button class="genetic-info">View Traits <i class="fas fa-dna"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Updated Grazing Map with Sheep Sectors -->
+<section class="grazing-map">
+    <h2>Rotational Grazing System</h2>
+    <div class="map-interface">
+        <div class="map-visual">
+            <img src="images/grazing-map.jpg" alt="Grazing Areas">
+            <div class="pasture-sector cattle" data-sector="A"></div>
+            <div class="pasture-sector cattle" data-sector="B"></div>
+            <div class="pasture-sector sheep" data-sector="C"></div>
+            <div class="pasture-sector sheep" data-sector="D"></div>
+        </div>
+        <div class="map-controls">
+            <div class="species-selector">
+                <button class="species active" data-species="all">All</button>
+                <button class="species" data-species="cattle">Cattle Only</button>
+                <button class="species" data-species="sheep">Sheep Only</button>
+            </div>
+            <div class="grazing-schedule">
+                <h3>Current Rotation</h3>
+                <div class="schedule-timeline">
+                    <div class="timeline-event sheep" data-days="7">Sector C</div>
+                    <div class="timeline-event cattle" data-days="5">Sector A</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Updated Health Dashboard with Sheep Metrics -->
+<section class="health-monitor">
+    <h2>Real-Time Health Monitoring</h2>
+    <div class="health-grid">
+        <div class="health-card">
+            <div class="vital-graph" id="weightChart"></div>
+            <h3>Cattle Weight Gain</h3>
+            <p>Last 30 Days: +45kg</p>
+        </div>
+        <div class="health-card sheep-health">
+            <div class="health-metric">
+                <div class="metric-circle" data-percent="92">
+                    <span>92%</span>
+                </div>
+                <p>Lamb Survival Rate</p>
+            </div>
+        </div>
+        <div class="health-card sheep-health">
+            <div class="vital-graph" id="woolChart"></div>
+            <h3>Wool Production</h3>
+            <p>Monthly Average: 2.8kg/sheep</p>
+        </div>
+    </div>
+</section>
 				<!-- Sidebar -->
 					<div id="sidebar">
 						<div class="inner">
@@ -246,6 +244,246 @@
 					</div>
 
 			</div>
+<!-- WhatsApp Chat Widget -->
+<div class="whatsapp-widget">
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-header">
+            <div class="chat-agent">
+                <img src="images/logo.png" alt="Chibsah Farms">
+                <div class="agent-info">
+                    <h4>Chibsah Farms Support</h4>
+                    <p>Typically replies within minutes</p>
+                </div>
+            </div>
+            <button class="close-chat" onclick="toggleChat()">×</button>
+        </div>
+        
+        <div class="chat-body">
+            <div class="chat-message">
+                <p>Hello! 🌱 How can we help you today?</p>
+                <small id="messageTime"></small>
+            </div>
+            
+            <div class="chat-input">
+                <textarea placeholder="Type your message here..." id="messageInput"></textarea>
+                <button class="send-button" onclick="sendMessage()">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <button class="whatsapp-button" onclick="toggleChat()">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+</div>
+
+<style>
+/* WhatsApp Button Styles */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-button i {
+    color: white;
+    font-size: 32px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Chat Popup Styles */
+.chat-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.chat-popup.active {
+    transform: scale(1);
+}
+
+.chat-header {
+    background: #075E54;
+    color: white;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-agent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-agent img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.agent-info h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.agent-info p {
+    margin: 3px 0 0;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.chat-body {
+    padding: 15px;
+}
+
+.chat-message {
+    background: #f0f2f5;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.chat-message p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.chat-message small {
+    display: block;
+    text-align: right;
+    font-size: 10px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.chat-input textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    height: 40px;
+    font-size: 14px;
+}
+
+.send-button {
+    background: #25D366;
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .chat-popup {
+        width: 90%;
+        right: 5%;
+        bottom: 80px;
+    }
+}
+</style>
+
+<script>
+let chatVisible = false;
+let chatTimeInterval = null;
+
+function getCurrentGMTTime() {
+    const options = {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'GMT',
+        timeZoneName: 'short'
+    };
+    return new Date().toLocaleTimeString('en-US', options);
+}
+
+function updateChatTime() {
+    const timeElement = document.getElementById('messageTime');
+    if(timeElement) {
+        timeElement.textContent = getCurrentGMTTime();
+    }
+}
+
+function toggleChat() {
+    const popup = document.getElementById('chatPopup');
+    chatVisible = !chatVisible;
+    popup.classList.toggle('active', chatVisible);
+    
+    if(chatVisible) {
+        updateChatTime();
+        chatTimeInterval = setInterval(updateChatTime, 60000);
+    } else {
+        clearInterval(chatTimeInterval);
+    }
+}
+
+function sendMessage() {
+    const message = document.getElementById('messageInput').value;
+    const phoneNumber = "+233123456789"; // Replace with Chibsah's WhatsApp number
+    const encodedMessage = encodeURIComponent(message || "Hello Chibsah Farms, I have a question");
+    
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+    toggleChat();
+}
+
+document.addEventListener('click', (e) => {
+    const popup = document.getElementById('chatPopup');
+    const button = document.querySelector('.whatsapp-button');
+    
+    if (!popup.contains(e.target) && !button.contains(e.target) && chatVisible) {
+        toggleChat();
+        clearInterval(chatTimeInterval);
+    }
+});
+</script>
 
 <!-- HTML -->
 <footer class="site-footer">

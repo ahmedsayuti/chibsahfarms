@@ -490,7 +490,248 @@
 					</div>
 
 			</div>
-		
+
+<!-- WhatsApp Chat Widget -->
+<div class="whatsapp-widget">
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-header">
+            <div class="chat-agent">
+                <img src="images/logo.png" alt="Chibsah Farms">
+                <div class="agent-info">
+                    <h4>Chibsah Farms Support</h4>
+                    <p>Typically replies within minutes</p>
+                </div>
+            </div>
+            <button class="close-chat" onclick="toggleChat()">×</button>
+        </div>
+        
+        <div class="chat-body">
+            <div class="chat-message">
+                <p>Hello! 🌱 How can we help you today?</p>
+                <small id="messageTime"></small>
+            </div>
+            
+            <div class="chat-input">
+                <textarea placeholder="Type your message here..." id="messageInput"></textarea>
+                <button class="send-button" onclick="sendMessage()">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <button class="whatsapp-button" onclick="toggleChat()">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+</div>
+
+<style>
+/* WhatsApp Button Styles */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-button i {
+    color: white;
+    font-size: 32px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Chat Popup Styles */
+.chat-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.chat-popup.active {
+    transform: scale(1);
+}
+
+.chat-header {
+    background: #075E54;
+    color: white;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-agent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-agent img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.agent-info h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.agent-info p {
+    margin: 3px 0 0;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.chat-body {
+    padding: 15px;
+}
+
+.chat-message {
+    background: #f0f2f5;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.chat-message p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.chat-message small {
+    display: block;
+    text-align: right;
+    font-size: 10px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.chat-input textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    height: 40px;
+    font-size: 14px;
+}
+
+.send-button {
+    background: #25D366;
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .chat-popup {
+        width: 90%;
+        right: 5%;
+        bottom: 80px;
+    }
+}
+</style>
+
+<script>
+let chatVisible = false;
+let chatTimeInterval = null;
+
+function getCurrentGMTTime() {
+    const options = {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'GMT',
+        timeZoneName: 'short'
+    };
+    return new Date().toLocaleTimeString('en-US', options);
+}
+
+function updateChatTime() {
+    const timeElement = document.getElementById('messageTime');
+    if(timeElement) {
+        timeElement.textContent = getCurrentGMTTime();
+    }
+}
+
+function toggleChat() {
+    const popup = document.getElementById('chatPopup');
+    chatVisible = !chatVisible;
+    popup.classList.toggle('active', chatVisible);
+    
+    if(chatVisible) {
+        updateChatTime();
+        chatTimeInterval = setInterval(updateChatTime, 60000);
+    } else {
+        clearInterval(chatTimeInterval);
+    }
+}
+
+function sendMessage() {
+    const message = document.getElementById('messageInput').value;
+    const phoneNumber = "+233123456789"; // Replace with Chibsah's WhatsApp number
+    const encodedMessage = encodeURIComponent(message || "Hello Chibsah Farms, I have a question");
+    
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+    toggleChat();
+}
+
+document.addEventListener('click', (e) => {
+    const popup = document.getElementById('chatPopup');
+    const button = document.querySelector('.whatsapp-button');
+    
+    if (!popup.contains(e.target) && !button.contains(e.target) && chatVisible) {
+        toggleChat();
+        clearInterval(chatTimeInterval);
+    }
+});
+</script>
+
 <!-- Footer -->
 <footer class="site-footer">
     <div class="footer-container">
