@@ -67,24 +67,76 @@
 										</div>
 									</div>
 								
-									<!-- Contact Form Below -->
-									<div class="contact-form">
-										<h2>Send Us a Message</h2>
-										<form id="contactForm">
-											<div class="form-row">
-												<div class="form-group">
-													<input type="text" name="name" placeholder="Your Name*" required>
-												</div>
-												<div class="form-group">
-													<input type="email" name="email" placeholder="Email*" required>
-												</div>
-											</div>
-											<div class="form-group">
-												<textarea name="message" placeholder="Your Message*" rows="5" required></textarea>
-											</div>
-											<button type="submit" class="button primary"><h3>Send Message <i class="fas fa-paper-plane"</h3></i></button>
-										</form>
-									</div>
+                                    <!-- In your contact form -->
+                                    <form id="contactForm" 
+                                        action="https://formspree.io/f/mvgakjww" 
+                                        method="POST"
+                                        enctype="multipart/form-data">
+                                        
+                                        <!-- Required Formspree fields -->
+                                        <input type="hidden" name="_next" value="thank-you.html">
+                                        <input type="hidden" name="_subject" value="New Message from Website">
+                                        <input type="text" name="_gotcha" style="display:none">
+
+                                        <!-- Your form fields -->
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <input type="text" name="name" placeholder="Your Name*" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" name="email" placeholder="Email*" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea name="message" placeholder="Your Message*" rows="5" required></textarea>
+                                        </div>
+
+                                        <button type="submit" class="button primary"><h3>Send Message <i class="fas fa-paper-plane"></i></h3></i>
+                                        </button>
+                                    </form>
+
+                                    <!-- Add this JavaScript -->
+                                    <script>
+                                    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+                                        e.preventDefault();
+                                        
+                                        const form = e.target;
+                                        const submitBtn = form.querySelector('button[type="submit"]');
+                                        const originalBtnText = submitBtn.innerHTML;
+
+                                        try {
+                                            // Show loading state
+                                            submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Sending...`;
+                                            submitBtn.disabled = true;
+
+                                            // Submit to Formspree
+                                            const response = await fetch(form.action, {
+                                                method: 'POST',
+                                                body: new FormData(form),
+                                                headers: { 'Accept': 'application/json' }
+                                            });
+
+                                            // Handle response
+                                            if (response.ok) {
+                                                // Manual redirect to bypass Formspree's default
+                                                window.location.href = form.querySelector('[name="_next"]').value;
+                                            } else {
+                                                const errorData = await response.json();
+                                                throw new Error(errorData.error || 'Submission failed');
+                                            }
+                                        } catch (error) {
+                                            // Show error message
+                                            const errorDiv = document.createElement('div');
+                                            errorDiv.className = 'form-error';
+                                            errorDiv.textContent = `Error: ${error.message}`;
+                                            form.appendChild(errorDiv);
+                                        } finally {
+                                            // Reset button state
+                                            submitBtn.innerHTML = originalBtnText;
+                                            submitBtn.disabled = false;
+                                        }
+                                    });
+                                    </script>
 								
 									<!-- Office Hours Below Form -->
 									<div class="contact-hours">
