@@ -103,7 +103,7 @@
         }
 
         .navbar {
-            padding: 15px 0;
+            padding: 1px 0;
         }
 
         .nav-content {
@@ -113,7 +113,7 @@
         }
 
         .logo {
-            display: flex;
+            display: flexbox;
             align-items: center;
             gap: 12px;
         }
@@ -851,7 +851,7 @@
                     <div class="contact-info">
                         <span><i class="fas fa-phone"></i> +233 24 123 4567</span>
                         <span><i class="fas fa-envelope"></i> info@chibsahfarms.com</span>
-                        <span><i class="fas fa-map-marker-alt"></i> Head Office: Tse Addo High Street, Accra, Ghana</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Head Office: Tse Addo High Street, Tebibiiano-Accra, Ghana</span>
                     </div>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -867,7 +867,7 @@
                 <div class="nav-content">
                     <div class="logo">
                         <a href="index.html">
-                            <img src="images/logo.png" alt="Chibsah Farms Logo" style="height: 180px;">
+                            <img src="images/logo.png" alt="Chibsah Farms Logo" style="height: 130px;">
                             <div>
                             </div>
                         </a>
@@ -1331,7 +1331,7 @@
                 
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Head Office: Tse Addo High Street, Accra, Ghana</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Head Office: Tse Addo High Street, Tebibiiano-Accra, Ghana</p>
                     <p><i class="fas fa-phone"></i> +233 24 123 4567</p>
                     <p><i class="fas fa-envelope"></i> info@chibsahfarms.com</p>
                     <p><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</p>
@@ -1785,54 +1785,194 @@ Sent from website contact form.`;
     });
     </script>
 
-    <button id="backToTopBtn" title="Go to top">
-    ⬆
-    </button>
-
     <style>
-    /* Stylish Back to Top Button */
-    #backToTopBtn {
-        display: none;
+    /* Scroll to Top Button Styles */
+    .scroll-to-top {
         position: fixed;
-        bottom: 140px;
-        right: 55px;
-        z-index: 99;
+        bottom: 15px;
+        right: 54px;
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, #4CAF50, #6d736d); /* nice gradient */
-        color: white;
+        background: linear-gradient(135deg, #59638b 0%, #175133 100%);
         border: none;
-        outline: none;
+        border-radius: 50%;
         cursor: pointer;
-        border-radius: 15px; /* softer rounded edges */
-        font-size: 20px;
-        font-weight: bold;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px) scale(0.8);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
     }
 
-    /* Hover effect */
-    #backToTopBtn:hover {
-        background: linear-gradient(135deg, #66BB6A, #388E3C);
-        transform: scale(1.1);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    .scroll-to-top::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 12px solid white;
+        transition: transform 0.3s ease;
+    }
+
+    /* Show button when scrolled */
+    .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+    }
+
+    /* Hover effects */
+    .scroll-to-top:hover {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+        transform: translateY(-2px) scale(1.05);
+    }
+
+    .scroll-to-top:hover::before {
+        transform: translateY(-2px);
+    }
+
+    /* Active state */
+    .scroll-to-top:active {
+        transform: translateY(0) scale(0.95);
+        box-shadow: 0 2px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    /* Fade on excessive scroll */
+    .scroll-to-top.fade {
+        opacity: 0.3;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+        .scroll-to-top {
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+        }
+
+        .scroll-to-top::before {
+            border-left-width: 7px;
+            border-right-width: 7px;
+            border-bottom-width: 10px;
+        }
     }
     </style>
 
+    <!-- HTML - Add this button element anywhere in your <body> -->
+    <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top"></button>
+
+
     <script>
-    let backToTopBtn = document.getElementById("backToTopBtn");
+    // Scroll to Top Button Implementation
+    (function() {
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        let isScrolling = false;
+        let fadeTimeout;
 
-    window.onscroll = function() {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
-        backToTopBtn.style.display = "block";
-        } else {
-        backToTopBtn.style.display = "none";
+        // Configuration
+        const config = {
+            showAfter: 100,        // Show button after scrolling this many pixels
+            hideAfter: 3000,       // Hide/fade button after this many pixels of continuous scrolling
+            fadeDelay: 2000,       // Delay before fading during excessive scroll
+            scrollDuration: 800    // Duration of smooth scroll animation
+        };
+
+        // Smooth scroll to top function
+        function scrollToTop() {
+            const startPosition = window.pageYOffset;
+            const startTime = performance.now();
+
+            function animateScroll(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / config.scrollDuration, 1);
+                
+                // Easing function (ease-out cubic)
+                const ease = 1 - Math.pow(1 - progress, 3);
+                
+                window.scrollTo(0, startPosition * (1 - ease));
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animateScroll);
+                }
+            }
+
+            requestAnimationFrame(animateScroll);
         }
-    };
 
-    backToTopBtn.onclick = function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+        // Throttled scroll handler
+        function throttledScrollHandler() {
+            if (!isScrolling) {
+                requestAnimationFrame(handleScroll);
+                isScrolling = true;
+            }
+        }
+
+        // Main scroll handler
+        function handleScroll() {
+            const scrollPosition = window.pageYOffset;
+
+            // Show/hide button based on scroll position
+            if (scrollPosition > config.showAfter) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible', 'fade');
+                clearTimeout(fadeTimeout);
+            }
+
+            // Fade button during excessive scrolling (UX improvement)
+            if (scrollPosition > config.hideAfter) {
+                clearTimeout(fadeTimeout);
+                fadeTimeout = setTimeout(() => {
+                    scrollToTopBtn.classList.add('fade');
+                }, config.fadeDelay);
+            } else {
+                scrollToTopBtn.classList.remove('fade');
+                clearTimeout(fadeTimeout);
+            }
+
+            isScrolling = false;
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', throttledScrollHandler, { passive: true });
+        
+        scrollToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            scrollToTop();
+        });
+
+        // Keyboard accessibility
+        scrollToTopBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                scrollToTop();
+            }
+        });
+
+        // Handle window resize (mobile orientation changes)
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                handleScroll();
+            }, 150);
+        });
+
+        // Prefers-reduced-motion support
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            scrollToTopBtn.style.transition = 'none';
+        }
+
+        // Initialize
+        handleScroll();
+    })();
     </script>
 
 </body>
