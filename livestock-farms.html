@@ -92,6 +92,61 @@
             align-items: center;
             gap: 8px;
         }
+                /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: #f8faf5;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .contact-info {
+            padding: 10px;
+            background: rgb(200, 219, 181);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #7ed321;
+            margin-top: 5px;
+        }
+
+        .contact-details h4 {
+            color: #2d5016;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .contact-details p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
 
         .social-links a {
             color: white;
@@ -436,12 +491,12 @@
                 <div class="nav-content">
                     <div class="logo">
                         <a href="index.html">
-                            <img src="images/logo.png" alt="Chibsah Farms Logo">
+                            <img src="images/logo.png" alt="Chibsah Farms Logo" style="height: 130px;">
                         </a>
                     </div>
                     
                     <ul class="nav-menu" id="navMenu">
-                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#products">Products</a></li>
                         <li><a href="#certifications">Quality</a></li>
@@ -521,7 +576,7 @@
             <h2>Rotational Grazing System</h2>
             <div class="map-interface">
                 <div class="map-visual">
-                    <img src="images/grazingarea.jpg" alt="Grazing Areas">
+                    <img src="images/grazingarea.png" alt="Grazing Areas">
                     <div class="pasture-sector cattle" data-sector="A"></div>
                     <div class="pasture-sector cattle" data-sector="B"></div>
                     <div class="pasture-sector sheep" data-sector="C"></div>
@@ -670,7 +725,7 @@
             }
 
             .pasture-sector.active {
-                animation: active-glow 2s infinite alternate;
+                animation: active-glow 4s infinite alternate;
                 transform: scale(1.15);
             }
 
@@ -1806,12 +1861,5 @@
             });
         });
     </script>
-    		<!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
 </body>
 </html>

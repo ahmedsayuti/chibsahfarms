@@ -5,7 +5,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-html,
+/* html,
 body,
 div,
 span,
@@ -92,7 +92,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-}
+} */
 
 article,
 aside,
@@ -109,26 +109,26 @@ section {
 }
 
 /* Adjust logo size */
-.logo img {
-  max-height: 120px; /* Match your logo's aspect ratio */
+/* .logo img {
+  max-height: 120px;
   width: auto;
   margin: 50px 0;
-}
+} */
 
 /* For sticky headers */
 #header .logo {
   position: relative;
-  z-index: 1001; /* Ensure logo stays above other elements */
+  z-index: 1001;
 }
 
 body {
   line-height: 1;
 }
 
-ol,
+/* ol,
 ul {
   list-style: none;
-}
+} */
 
 blockquote,
 q {
@@ -216,7 +216,7 @@ body.is-resizing *:after {
 }
 
 /* Type */
-body,
+/* body,
 input,
 select,
 textarea {
@@ -225,23 +225,23 @@ textarea {
   font-size: 13pt;
   font-weight: 400;
   line-height: 1.65;
-}
-@media screen and (max-width: 1680px) {
+} */
+/* @media screen and (max-width: 1680px) {
   body,
   input,
   select,
   textarea {
     font-size: 11pt;
   }
-}
-@media screen and (max-width: 1280px) {
+} */
+/* @media screen and (max-width: 1280px) {
   body,
   input,
   select,
   textarea {
     font-size: 10pt;
   }
-}
+} */
 @media screen and (max-width: 360px) {
   body,
   input,
@@ -316,9 +316,9 @@ h1 {
 h2 {
   font-size: 1.75em;
 }
-header {
+/* header {
   text-align: center;
-}
+} */
 
 h3 {
   font-size: 1.25em;
@@ -1865,11 +1865,11 @@ ol li {
   padding-left: 0.25em;
 }
 
-ul {
+/* ul {
   list-style: disc;
   margin: 0 0 2em 0;
   padding-left: 1em;
-}
+} */
 ul li {
   padding-left: 0.5em;
 }
@@ -2133,12 +2133,12 @@ table.alt thead {
 table.alt tfoot {
   border-top: 0;
 }
-
-/* Button */
+.genetic-info,
+Button
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
-button,
+/* button, */
 .button {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -3200,10 +3200,10 @@ button:disabled,
   margin-bottom: 1rem;
 }
 
-.social-links {
+/* .social-links {
   display: flex;
   gap: 1rem;
-}
+} */
 
 .footer-center {
   flex: 1;
@@ -3432,7 +3432,7 @@ button:disabled,
   object-fit: cover;
 }
 
-.social-links {
+/* .social-links {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3442,9 +3442,9 @@ button:disabled,
   text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
+} */
 
-.team-member:hover .social-links {
+/* .team-member:hover .social-links {
   opacity: 1;
 }
 
@@ -3480,10 +3480,10 @@ button:disabled,
   .team-grid {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 /*Fading Style when scrolling*/
-.fade-in {
+/* .fade-in {
   opacity: 0;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
@@ -3507,10 +3507,10 @@ button:disabled,
 .fade-in.appear {
   opacity: 1;
   transform: translate(0);
-}
+} */
 
 /* Delay classes */
-.delay-1 {
+/* .delay-1 {
   transition-delay: 0.2s;
 }
 .delay-2 {
@@ -3518,10 +3518,10 @@ button:disabled,
 }
 .delay-3 {
   transition-delay: 0.6s;
-}
+} */
 
 /* Jump animation */
-@keyframes jump {
+/* @keyframes jump {
   0% {
     transform: translateY(0);
   }
@@ -3531,9 +3531,9 @@ button:disabled,
   100% {
     transform: translateY(0);
   }
-}
+} */
 
-.jump-in {
+/* .jump-in {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 1.94);
@@ -3543,10 +3543,10 @@ button:disabled,
   opacity: 1;
   transform: translateY(0);
   animation: jump 0.8s ease 0.3s;
-}
+} */
 
 /* Combine with previous fade effects */
-.fade-jump {
+/* .fade-jump {
   opacity: 0;
   transform: translateY(30px) scale(0.95);
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -3567,7 +3567,7 @@ button:disabled,
   font-size: 1.5em !important;
   /* or */
   transform: scale(2);
-}
+} */
 
 /* Avocado Page */
 .avocado-hero {
@@ -4500,7 +4500,7 @@ img {
   gap: 3rem;
 }
 
-.pasture-sector {
+/* .pasture-sector {
   position: absolute;
   border: 3px solid #8b5e3c;
   cursor: pointer;
@@ -4509,7 +4509,7 @@ img {
 
 .pasture-sector:hover {
   background: rgba(99, 86, 78, 0.2);
-}
+} */
 
 .health-monitor {
   background: #fff;
