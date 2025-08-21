@@ -1,552 +1,1817 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Livestock Farms</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chibsah Farms - Premium organic livestock, poultry, avocados, and grains from Ghana's Ashanti Region. Sustainable agriculture for a healthier future.">
+    <meta name="keywords" content="organic farming, Ghana agriculture, livestock, poultry, avocado, grains, sustainable farming, Ashanti Region">
+    <title>Chibsah livestock-farms</title>
 
-					<!-- Basic Favicon -->
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="shortcut icon" href="/favicon.ico">
-		
-		<!-- Apple Devices -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		
-		<!-- Android/Chrome -->
-		<link rel="manifest" href="/site.webmanifest">
-		
-		<!-- Microsoft Tiles -->
-		<meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="stylesheet" href="assets/css/main.css">
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+        <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><img src="images/logo.png" alt="Chibsah Farms Logo"></a>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									</ul>
-								</header>
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#7ed321">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
 
-								<!-- Updated Hero Section with Sheep Counter -->
-                            <section class="livestock-hero">
-                                <div class="hero-overlay">
-                                    <h1>Chibsah Ethical Livestock</h1>
-                                    <p>Humane Animal Husbandry & Sustainable Grazing Practices</p>
-                                    <div class="herd-counters">
-                                        <div class="counter">
-                                            <i class="fas fa-cow"></i>
-                                            <span class="count" data-target="1200">0</span>
-                                            <span>Free-Range Cattle</span>
-                                        </div>
-                                        <div class="counter">
-                                            <i class="fas fa-sheep"></i>
-                                            <span class="count" data-target="2500">0</span>
-                                            <span>Pasture-Raised Sheep</span>
-                                        </div>
-                                        <div class="counter">
-                                            <i class="fas fa-pastafarianism"></i>
-                                            <span class="count" data-target="5000">0</span>
-                                            <span>Acres of Pasture</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
+    <!-- Theme colors -->
+    <meta name="theme-color" content="#7ed321">
 
-                            <!-- Updated Breed Carousel with Sheep Breeds -->
-                            <section class="breed-showcase">
-                                <h2>Our Heritage Breeds</h2>
-                                <div class="breed-carousel">
-                                    <!-- Cattle Breed -->
-                                    <div class="breed-card">
-                                        <img src="images/sangacattle.jpg" alt="Sanga Cattle">
-                                        <div class="breed-info">
-                                            <h3>Sanga Cattle</h3>
-                                            <div class="breed-stats">
-                                                <div class="stat">
-                                                    <span class="stat-label">Drought Resistance</span>
-                                                    <div class="stat-bar" style="width: 90%"></div>
-                                                </div>
-                                                <button class="genetic-info">View Genetics <i class="fas fa-dna"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-                                    <!-- West African Dwarf Sheep -->
-                                    <div class="breed-card sheep-breed">
-                                        <img src="images/westafricandwarf.jpg" alt="West African Dwarf Sheep">
-                                        <div class="breed-info">
-                                            <h3>West African Dwarf</h3>
-                                            <div class="breed-stats">
-                                                <div class="stat">
-                                                    <span class="stat-label">Disease Resistance</span>
-                                                    <div class="stat-bar" style="width: 95%"></div>
-                                                </div>
-                                                <div class="stat">
-                                                    <span class="stat-label">Wool Quality</span>
-                                                    <div class="stat-bar" style="width: 75%"></div>
-                                                </div>
-                                                <button class="genetic-info">View Traits <i class="fas fa-dna"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
 
-                                    <!-- Sahelian Sheep -->
-                                    <div class="breed-card sheep-breed">
-                                        <img src="images/saheliansheep.jpg" alt="Sahelian Sheep">
-                                        <div class="breed-info">
-                                            <h3>Sahelian Sheep</h3>
-                                            <div class="breed-stats">
-                                                <div class="stat">
-                                                    <span class="stat-label">Heat Tolerance</span>
-                                                    <div class="stat-bar" style="width: 98%"></div>
-                                                </div>
-                                                <div class="stat">
-                                                    <span class="stat-label">Growth Rate</span>
-                                                    <div class="stat-bar" style="width: 85%"></div>
-                                                </div>
-                                                <button class="genetic-info">View Traits <i class="fas fa-dna"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #828580 0%, #4a7c27 100%);
+            color: rgb(47, 47, 47);
+            position: relative;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.427);
+        }
 
-                            <!-- Updated Grazing Map with Sheep Sectors -->
-                            <section class="grazing-map">
-                                <h2>Rotational Grazing System</h2>
-                                <div class="map-interface">
-                                    <div class="map-visual">
-                                        <img src="images/grazingarea.jpg" alt="Grazing Areas">
-                                        <div class="pasture-sector cattle" data-sector="A"></div>
-                                        <div class="pasture-sector cattle" data-sector="B"></div>
-                                        <div class="pasture-sector sheep" data-sector="C"></div>
-                                        <div class="pasture-sector sheep" data-sector="D"></div>
-                                    </div>
-                                    <div class="map-controls">
-                                        <div class="species-selector">
-                                            <button class="species active" data-species="all">All</button>
-                                            <button class="species" data-species="cattle">Cattle Only</button>
-                                            <button class="species" data-species="sheep">Sheep Only</button>
-                                        </div>
-                                        <div class="grazing-schedule">
-                                            <h3>Current Rotation</h3>
-                                            <div class="schedule-timeline">
-                                                <div class="timeline-event sheep" data-days="7">Sector C</div>
-                                                <div class="timeline-event cattle" data-days="5">Sector A</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
+        .top-bar {
+            background: rgba(70, 104, 88, 0.2);
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
 
-                            <!-- Updated Health Dashboard with Sheep Metrics -->
-                            <section class="health-monitor">
-                                <h2>Real-Time Health Monitoring</h2>
-                                <div class="health-grid">
-                                    <div class="health-card">
-                                        <div class="vital-graph" id="weightChart"></div>
-                                        <h3>Cattle Weight Gain</h3>
-                                        <p>Last 30 Days: +45kg</p>
-                                    </div>
-                                    <div class="health-card sheep-health">
-                                        <div class="health-metric">
-                                            <div class="metric-circle" data-percent="92">
-                                                <span>92%</span>
-                                            </div>
-                                            <p>Lamb Survival Rate</p>
-                                        </div>
-                                    </div>
-                                    <div class="health-card sheep-health">
-                                        <div class="vital-graph" id="woolChart"></div>
-                                        <h3>Wool Production</h3>
-                                        <p>Monthly Average: 2.8kg/sheep</p>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 2rem;
+            margin-left: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #7ed321;
+        }
+
+        .navbar {
+            padding: 1px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flexbox;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: #7ed321;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #7ed321;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: #7ed321;
+            color: #2d5016;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(126, 211, 33, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #6bc91a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(126, 211, 33, 0.4);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a2f0f;
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: #7ed321;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            color: #ccc;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #7ed321;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #888;
+        }
+
+        /* WhatsApp Button Styles */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 70px;
+            right: 50px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+        }
+
+        .whatsapp-button i {
+            color: white;
+            font-size: 32px;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Scroll to Top Button Styles */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 15px;
+            right: 54px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #59638b 0%, #175133 100%);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+        }
+
+        .scroll-to-top::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 12px solid white;
+            transition: transform 0.3s ease;
+        }
+
+        /* Show button when scrolled */
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Hover effects */
+        .scroll-to-top:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        .scroll-to-top:hover::before {
+            transform: translateY(-2px);
+        }
+
+        /* Footer Map */
+        .footer-map-wrapper {
+            margin: 40px 0;
+        }
+
+        .footer-map-wrapper iframe {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .top-bar-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .contact-info {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .whatsapp-button {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-button i {
+                font-size: 24px;
+            }
+
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .contact-info span {
+                justify-content: center;
+            }
+            
+            .logo img {
+                height: 100px;
+            }
+            
+            .content-placeholder h1 {
+                font-size: 2rem;
+            }
+            
+            .content-placeholder p {
+                font-size: 1rem;
+            }
+            
+            .placeholder-graphic {
+                width: 250px;
+                height: 150px;
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +233 24 123 4567</span>
+                        <span><i class="fas fa-envelope"></i> info@chibsahfarms.com</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Head Office: Tse Addo High Street, Tebibiiano-Accra, Ghana</span>
                     </div>
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-							<section id="search" class="alt">
-								<div class="search-container">
-									<form onsubmit="event.preventDefault(); performSearch();">
-										<input 
-											type="text" 
-											id="searchInput" 
-											name="query" 
-											placeholder="Search farms, products, or articles..."
-											aria-label="Website Search"
-										>
-										<div id="searchResults" class="search-results"></div>
-									</form>
-								</div>
-							</section>
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="contact.html">Contact Us</a></li>
-										<li>
-											<span class="opener">Our Farms</span>
-											<ul>
-												<li><a href="avocado-farms.html">Avocado Farms</a></li>
-												<li><a href="grain-farms.html">Grain Farms</a></li>
-												<li><a href="poultry-farms.html">Poultry Farms</a></li>
-												<li><a href="livestock-farms.html">Livestock Farms</a></li>
-											</ul>
-										</li>
-										
-										<li><a href="faq.html">FAQ</a></li>
-										<li><a href="#">Privacy Policy</a></li>
-								</nav>
-
-							<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Get in touch</h2>
-								</header>
-								<p>Contact us for any of our farm produce</p>
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">Info: info@chibsahfarms.com<br>
-										Support: support@chibsahfarms.com</a></li>
-									<li class="icon solid fa-phone">(000) 000-0000</li>
-									<li class="icon solid fa-home"> JV29+FH6, Tse Addo High Street,<br />
-									Accra, Ghana</li>
-								</ul>
-							</section>
-
-							<!-- Footer -->
-							<footer id="footer">
-								<p class="copyright">&copy; 2025 Chibsah Farms. All rights reserved.</p>
-							</footer>
-
-						</div>
-					</div>
-
-			</div>
-<!-- WhatsApp Chat Widget -->
-<div class="whatsapp-widget">
-    <div class="chat-popup" id="chatPopup">
-        <div class="chat-header">
-            <div class="chat-agent">
-                <img src="images/logo.png" alt="Chibsah Farms">
-                <div class="agent-info">
-                    <h4>Chibsah Farms Support</h4>
-                    <p>Typically replies within minutes</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
-            <button class="close-chat" onclick="toggleChat()">×</button>
         </div>
         
-        <div class="chat-body">
-            <div class="chat-message">
-                <p>Hello! 🌱 How can we help you today?</p>
-                <small id="messageTime"></small>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="Chibsah Farms Logo">
+                        </a>
+                    </div>
+                    
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#certifications">Quality</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    
+                    <a href="#contact" class="cta-button">Get Quote</a>
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+        <!-- Updated Breed Carousel with Sheep Breeds -->
+        <section class="breed-showcase">
+            <h1><center>Our Heritage Breeds</center></h1>
+            <div class="breed-carousel">
+                <!-- Cattle Breed -->
+                <div class="breed-card">
+                    <img src="images/sangacattle.jpg" alt="Sanga Cattle">
+                    <div class="breed-info">
+                        <h3>Sanga Cattle</h3>
+                        <div class="breed-stats">
+                            <div class="stat">
+                                <span class="stat-label">Drought Resistance</span>
+                                <div class="stat-bar" style="width: 90%"></div>
+                            </div>
+                            <button class="genetic-info">View Genetics <i class="fas fa-dna"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- West African Dwarf Sheep -->
+                <div class="breed-card sheep-breed">
+                    <img src="images/westafricandwarf.jpg" alt="West African Dwarf Sheep">
+                    <div class="breed-info">
+                        <h3>West African Dwarf</h3>
+                        <div class="breed-stats">
+                            <div class="stat">
+                                <span class="stat-label">Disease Resistance</span>
+                                <div class="stat-bar" style="width: 95%"></div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Wool Quality</span>
+                                <div class="stat-bar" style="width: 75%"></div>
+                            </div>
+                            <button class="genetic-info">View Traits <i class="fas fa-dna"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sahelian Sheep -->
+                <div class="breed-card sheep-breed">
+                    <img src="images/saheliansheep.jpg" alt="Sahelian Sheep">
+                    <div class="breed-info">
+                        <h3>Sahelian Sheep</h3>
+                        <div class="breed-stats">
+                            <div class="stat">
+                                <span class="stat-label">Heat Tolerance</span>
+                                <div class="stat-bar" style="width: 98%"></div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Growth Rate</span>
+                                <div class="stat-bar" style="width: 85%"></div>
+                            </div>
+                            <button class="genetic-info">View Traits <i class="fas fa-dna"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Updated Grazing Map with Sheep Sectors -->
+        <section class="grazing-map">
+            <h2>Rotational Grazing System</h2>
+            <div class="map-interface">
+                <div class="map-visual">
+                    <img src="images/grazingarea.jpg" alt="Grazing Areas">
+                    <div class="pasture-sector cattle" data-sector="A"></div>
+                    <div class="pasture-sector cattle" data-sector="B"></div>
+                    <div class="pasture-sector sheep" data-sector="C"></div>
+                    <div class="pasture-sector sheep" data-sector="D"></div>
+                </div>
+                <div class="map-controls">
+                    <div class="species-selector">
+                        <button class="species active" data-species="all"><h4>All</h4></button>
+                        <button class="species" data-species="cattle"><h4>Cattle Only</h4></button>
+                        <button class="species" data-species="sheep"><h4>Sheep Only</h4></button>
+                    </div>
+                    <div class="grazing-schedule">
+                        <h3>Current Rotation</h3>
+                        <div class="schedule-timeline">
+                            <div class="timeline-event sheep" data-days="7">Sector C</div>
+                            <div class="timeline-event cattle" data-days="5">Sector A</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            /* Rotational Grazing System Styles */
+            .grazing-map {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+                background: linear-gradient(135deg, #f8fdf8 0%, #e8f5e8 100%);
+                border-radius: 12px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                font-family: 'Arial', sans-serif;
+            }
+
+            .grazing-map h2 {
+                text-align: center;
+                color: #2d5016;
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+                font-weight: 700;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .map-interface {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 2rem;
+                align-items: start;
+            }
+
+            /* Map Visual Section */
+            .map-visual {
+                position: relative;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+                background: #ffffff;
+                padding: 1rem;
+            }
+
+            .map-visual img {
+                width: 100%;
+                height: auto;
+                max-height: 400px;
+                object-fit: cover;
+                border-radius: 8px;
+                transition: transform 0.3s ease;
+            }
+
+            .map-visual:hover img {
+                transform: scale(1.02);
+            }
+
+            /* Pasture Sectors */
+            .pasture-sector {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                color: white;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+                border: 3px solid rgba(255, 255, 255, 0.3);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .pasture-sector::before {
+                content: attr(data-sector);
+                font-size: 1.5rem;
+                font-weight: bold;
+                z-index: 2;
+            }
+
+            .pasture-sector::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), transparent);
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            /* Sector Positioning */
+            .pasture-sector[data-sector="A"] {
+                top: 20%;
+                left: 15%;
+            }
+
+            .pasture-sector[data-sector="B"] {
+                top: 20%;
+                right: 15%;
+            }
+
+            .pasture-sector[data-sector="C"] {
+                bottom: 20%;
+                left: 15%;
+            }
+
+            .pasture-sector[data-sector="D"] {
+                bottom: 20%;
+                right: 15%;
+            }
+
+            /* Species-specific styling */
+            .pasture-sector.cattle {
+                background: linear-gradient(135deg, #8B4513 0%, #CD853F 50%, #DEB887 100%);
+                animation: cattle-pulse 3s infinite ease-in-out;
+            }
+
+            .pasture-sector.sheep {
+                background: linear-gradient(135deg, #4682B4 0%, #87CEEB 50%, #B0E0E6 100%);
+                animation: sheep-pulse 3s infinite ease-in-out;
+            }
+
+            .pasture-sector:hover {
+                transform: scale(1.2);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+                z-index: 10;
+            }
+
+            .pasture-sector.active {
+                animation: active-glow 2s infinite alternate;
+                transform: scale(1.15);
+            }
+
+            /* Map Controls */
+            .map-controls {
+                background: white;
+                padding: 2rem;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                height: fit-content;
+            }
+
+            .species-selector {
+                margin-bottom: 2rem;
+            }
+
+            .species-selector h3,
+            .grazing-schedule h3 {
+                color: #2d5016;
+                margin-bottom: 1rem;
+                font-size: 1.3rem;
+                border-bottom: 2px solid #7cb342;
+                padding-bottom: 0.5rem;
+            }
+
+            .species {
+                background: linear-gradient(135deg, #7cb342 0%, #8bc34a 100%);
+                color: white;
+                border: none;
+                padding: 0.8rem 1.5rem;
+                margin: 0.3rem;
+                border-radius: 25px;
+                cursor: pointer;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                box-shadow: 0 3px 12px rgba(124, 179, 66, 0.3);
+            }
+
+            .species:hover {
+                background: linear-gradient(135deg, #689f38 0%, #7cb342 100%);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(124, 179, 66, 0.4);
+            }
+
+            .species.active {
+                background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+                box-shadow: 0 4px 16px rgba(76, 175, 80, 0.4);
+                transform: scale(1.05);
+            }
+
+            /* Schedule Timeline */
+            .schedule-timeline {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .timeline-event {
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                color: white;
+                font-weight: 600;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .timeline-event::before {
+                content: attr(data-days) ' days';
+                font-size: 0.9rem;
+                opacity: 0.8;
+            }
+
+            .timeline-event::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.1);
+                transition: width 0.3s ease;
+                width: 0;
+            }
+
+            .timeline-event:hover::after {
+                width: 100%;
+            }
+
+            .timeline-event.cattle {
+                background: linear-gradient(135deg, #8B4513 0%, #CD853F 100%);
+                box-shadow: 0 3px 12px rgba(139, 69, 19, 0.3);
+            }
+
+            .timeline-event.sheep {
+                background: linear-gradient(135deg, #4682B4 0%, #87CEEB 100%);
+                box-shadow: 0 3px 12px rgba(70, 130, 180, 0.3);
+            }
+
+            .timeline-event:hover {
+                transform: translateX(5px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Animations */
+            @keyframes cattle-pulse {
+                0%, 100% { box-shadow: 0 4px 16px rgba(139, 69, 19, 0.4); }
+                50% { box-shadow: 0 4px 16px rgba(139, 69, 19, 0.7), 0 0 20px rgba(139, 69, 19, 0.3); }
+            }
+
+            @keyframes sheep-pulse {
+                0%, 100% { box-shadow: 0 4px 16px rgba(70, 130, 180, 0.4); }
+                50% { box-shadow: 0 4px 16px rgba(70, 130, 180, 0.7), 0 0 20px rgba(70, 130, 180, 0.3); }
+            }
+
+            @keyframes active-glow {
+                0% { 
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 215, 0, 0.6);
+                }
+                100% { 
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 215, 0, 0.8);
+                }
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .map-interface {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
+                
+                .grazing-map {
+                    padding: 1rem;
+                }
+                
+                .grazing-map h2 {
+                    font-size: 2rem;
+                }
+                
+                .pasture-sector {
+                    width: 60px;
+                    height: 60px;
+                }
+                
+                .pasture-sector::before {
+                    font-size: 1.2rem;
+                }
+                
+                .species {
+                    padding: 0.6rem 1.2rem;
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
+        <script>
+        // Rotational Grazing System JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const grazingMap = {
+                init() {
+                    this.cacheDOMElements();
+                    this.bindEvents();
+                    this.setInitialState();
+                },
+
+                cacheDOMElements() {
+                    this.speciesButtons = document.querySelectorAll('.species');
+                    this.pastureSectors = document.querySelectorAll('.pasture-sector');
+                    this.timelineEvents = document.querySelectorAll('.timeline-event');
+                    this.mapVisual = document.querySelector('.map-visual');
+                },
+
+                bindEvents() {
+                    // Species filter buttons
+                    this.speciesButtons.forEach(button => {
+                        button.addEventListener('click', (e) => {
+                            e.stopPropagation(); // Prevent document click handler
+                            this.handleSpeciesFilter(e.target.dataset.species);
+                        });
+                    });
+
+                    // Pasture sector interactions
+                    this.pastureSectors.forEach(sector => {
+                        sector.addEventListener('click', (e) => {
+                            e.stopPropagation(); // Prevent document click handler
+                            this.handleSectorClick(e.target);
+                        });
+
+                        sector.addEventListener('mouseenter', (e) => {
+                            this.handleSectorHover(e.target, true);
+                        });
+
+                        sector.addEventListener('mouseleave', (e) => {
+                            this.handleSectorHover(e.target, false);
+                        });
+                    });
+
+                    // Timeline event interactions
+                    this.timelineEvents.forEach(event => {
+                        event.addEventListener('click', (e) => {
+                            e.stopPropagation(); // Prevent document click handler
+                            this.handleTimelineClick(e.target);
+                        });
+                    });
+
+                    // Document click handler to collapse popup when clicking elsewhere
+                    document.addEventListener('click', (e) => {
+                        this.handleDocumentClick(e);
+                    });
+                },
+
+                setInitialState() {
+                    // Set active sectors based on current rotation
+                    this.setActiveSectors();
+                    this.updateSectorInfo();
+                },
+
+                handleSpeciesFilter(species) {
+                    // Update active button
+                    this.speciesButtons.forEach(btn => btn.classList.remove('active'));
+                    document.querySelector(`[data-species="${species}"]`).classList.add('active');
+
+                    // Filter sectors with smooth animation
+                    this.pastureSectors.forEach(sector => {
+                        const sectorSpecies = Array.from(sector.classList).find(cls => cls === 'cattle' || cls === 'sheep');
+                        
+                        if (species === 'all' || species === sectorSpecies) {
+                            this.showSector(sector);
+                        } else {
+                            this.hideSector(sector);
+                        }
+                    });
+
+                    // Filter timeline events
+                    this.timelineEvents.forEach(event => {
+                        const eventSpecies = Array.from(event.classList).find(cls => cls === 'cattle' || cls === 'sheep');
+                        
+                        if (species === 'all' || species === eventSpecies) {
+                            event.style.display = 'flex';
+                            event.style.animation = 'slideInRight 0.5s ease-out';
+                        } else {
+                            event.style.display = 'none';
+                        }
+                    });
+
+                    this.addFilterFeedback(species);
+                },
+
+                showSector(sector) {
+                    sector.style.opacity = '1';
+                    sector.style.transform = 'scale(1)';
+                    sector.style.pointerEvents = 'auto';
+                    sector.classList.add('filter-visible');
+                },
+
+                hideSector(sector) {
+                    sector.style.opacity = '0.3';
+                    sector.style.transform = 'scale(0.8)';
+                    sector.style.pointerEvents = 'none';
+                    sector.classList.remove('filter-visible');
+                },
+
+                handleSectorClick(sector) {
+                    const sectorId = sector.dataset.sector;
+                    const sectorType = Array.from(sector.classList).find(cls => cls === 'cattle' || cls === 'sheep');
+                    
+                    // Toggle active state
+                    this.pastureSectors.forEach(s => s.classList.remove('active'));
+                    sector.classList.add('active');
+
+                    // Show sector information
+                    this.showSectorDetails(sectorId, sectorType);
+
+                    // Add click animation
+                    this.animateClick(sector);
+                },
+
+                handleSectorHover(sector, isEntering) {
+                    if (isEntering) {
+                        this.showSectorTooltip(sector);
+                        sector.style.zIndex = '15';
+                    } else {
+                        this.hideSectorTooltip();
+                        sector.style.zIndex = '1';
+                    }
+                },
+
+                handleTimelineClick(event) {
+                    const days = event.dataset.days;
+                    const sector = event.textContent.replace(` ${days} days`, '').trim();
+                    const species = Array.from(event.classList).find(cls => cls === 'cattle' || cls === 'sheep');
+
+                    // Highlight corresponding sector
+                    const correspondingSector = document.querySelector(`[data-sector="${sector.split(' ')[1]}"]`);
+                    if (correspondingSector) {
+                        this.handleSectorClick(correspondingSector);
+                    }
+
+                    // Add timeline click animation
+                    event.style.transform = 'translateX(10px) scale(1.05)';
+                    setTimeout(() => {
+                        event.style.transform = 'translateX(5px)';
+                    }, 200);
+                },
+
+                setActiveSectors() {
+                    // Set sectors with current rotation as active
+                    const activeSectors = ['C', 'A']; // Based on your timeline
+                    activeSectors.forEach(sectorId => {
+                        const sector = document.querySelector(`[data-sector="${sectorId}"]`);
+                        if (sector) {
+                            sector.classList.add('active');
+                        }
+                    });
+                },
+
+                showSectorDetails(sectorId, sectorType) {
+                    // Create or update sector info panel
+                    let infoPanel = document.querySelector('.sector-info-panel');
+                    
+                    if (!infoPanel) {
+                        infoPanel = document.createElement('div');
+                        infoPanel.className = 'sector-info-panel';
+                        this.mapVisual.appendChild(infoPanel);
+                    }
+
+                    const sectorData = this.getSectorData(sectorId, sectorType);
+                    
+                    infoPanel.innerHTML = `
+                        <div class="info-header">
+                            <h4>Sector ${sectorId}</h4>
+                            <span class="species-badge ${sectorType}">${sectorType.charAt(0).toUpperCase() + sectorType.slice(1)}</span>
+                        </div>
+                        <div class="info-content">
+                            <p><strong>Status:</strong> ${sectorData.status}</p>
+                            <p><strong>Size:</strong> ${sectorData.size}</p>
+                            <p><strong>Last Rotated:</strong> ${sectorData.lastRotated}</p>
+                            <p><strong>Grass Quality:</strong> 
+                                <span class="quality-indicator ${sectorData.grassQuality.toLowerCase()}">${sectorData.grassQuality}</span>
+                            </p>
+                        </div>
+                    `;
+
+                    // Prevent event bubbling for info panel clicks
+                    infoPanel.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+
+                    // Position and show panel
+                    infoPanel.style.display = 'block';
+                    infoPanel.style.animation = 'fadeInUp 0.4s ease-out';
+
+                    // Add panel styles dynamically if not already added
+                    this.addInfoPanelStyles();
+                },
+
+                getSectorData(sectorId, sectorType) {
+                    const sectorDatabase = {
+                        'A': { status: 'Currently Grazing', size: '2.5 acres', lastRotated: '5 days ago', grassQuality: 'Good' },
+                        'B': { status: 'Resting', size: '2.8 acres', lastRotated: '12 days ago', grassQuality: 'Excellent' },
+                        'C': { status: 'Currently Grazing', size: '2.2 acres', lastRotated: '7 days ago', grassQuality: 'Fair' },
+                        'D': { status: 'Ready for Rotation', size: '2.6 acres', lastRotated: '15 days ago', grassQuality: 'Excellent' }
+                    };
+
+                    return sectorDatabase[sectorId] || { status: 'Unknown', size: 'N/A', lastRotated: 'N/A', grassQuality: 'Unknown' };
+                },
+
+                showSectorTooltip(sector) {
+                    const sectorId = sector.dataset.sector;
+                    const sectorType = Array.from(sector.classList).find(cls => cls === 'cattle' || cls === 'sheep');
+                    
+                    let tooltip = document.querySelector('.sector-tooltip');
+                    if (!tooltip) {
+                        tooltip = document.createElement('div');
+                        tooltip.className = 'sector-tooltip';
+                        document.body.appendChild(tooltip);
+                    }
+
+                    tooltip.innerHTML = `
+                        <div class="tooltip-content">
+                            <strong>Sector ${sectorId}</strong><br>
+                            <span class="${sectorType}">${sectorType.charAt(0).toUpperCase() + sectorType.slice(1)} Area</span>
+                        </div>
+                    `;
+
+                    // Position tooltip
+                    const rect = sector.getBoundingClientRect();
+                    tooltip.style.left = (rect.left + rect.width / 2) + 'px';
+                    tooltip.style.top = (rect.top - 10) + 'px';
+                    tooltip.style.display = 'block';
+
+                    this.addTooltipStyles();
+                },
+
+                hideSectorTooltip() {
+                    const tooltip = document.querySelector('.sector-tooltip');
+                    if (tooltip) {
+                        tooltip.style.display = 'none';
+                    }
+                },
+
+                animateClick(sector) {
+                    sector.style.animation = 'none';
+                    sector.offsetHeight; // Force reflow
+                    sector.style.animation = 'clickPulse 0.6s ease-out';
+                },
+
+                handleDocumentClick(event) {
+                    // Check if click is inside the info panel or sector elements
+                    const infoPanel = document.querySelector('.sector-info-panel');
+                    const isClickInsidePanel = infoPanel && infoPanel.contains(event.target);
+                    const isClickOnSector = event.target.classList.contains('pasture-sector');
+                    const isClickOnControls = event.target.closest('.map-controls');
+
+                    // If click is outside relevant elements, collapse the popup
+                    if (!isClickInsidePanel && !isClickOnSector && !isClickOnControls) {
+                        this.collapseSectorPopup();
+                    }
+                },
+
+                collapseSectorPopup() {
+                    // Remove active class from all sectors
+                    this.pastureSectors.forEach(sector => {
+                        sector.classList.remove('active');
+                    });
+
+                    // Hide the info panel with animation
+                    const infoPanel = document.querySelector('.sector-info-panel');
+                    if (infoPanel) {
+                        infoPanel.style.animation = 'fadeOutDown 0.3s ease-in';
+                        setTimeout(() => {
+                            infoPanel.style.display = 'none';
+                        }, 300);
+                    }
+                },
+
+                addFilterFeedback(species) {
+                    // Show filter feedback
+                    let feedback = document.querySelector('.filter-feedback');
+                    if (!feedback) {
+                        feedback = document.createElement('div');
+                        feedback.className = 'filter-feedback';
+                        document.querySelector('.species-selector').appendChild(feedback);
+                    }
+
+                    const speciesText = species === 'all' ? 'All Animals' : species.charAt(0).toUpperCase() + species.slice(1);
+                    feedback.textContent = `Showing: ${speciesText}`;
+                    feedback.style.opacity = '1';
+
+                    setTimeout(() => {
+                        feedback.style.opacity = '0';
+                    }, 2000);
+                },
+
+                updateSectorInfo() {
+                    // Add rotation progress indicators
+                    this.timelineEvents.forEach(event => {
+                        const days = parseInt(event.dataset.days);
+                        const maxDays = 14; // Typical rotation period
+                        const progress = (days / maxDays) * 100;
+
+                        const progressBar = document.createElement('div');
+                        progressBar.className = 'rotation-progress';
+                        progressBar.style.width = `${progress}%`;
+                        event.appendChild(progressBar);
+                    });
+                },
+
+                addInfoPanelStyles() {
+                    if (!document.querySelector('#info-panel-styles')) {
+                        const styles = document.createElement('style');
+                        styles.id = 'info-panel-styles';
+                        styles.textContent = `
+                            .sector-info-panel {
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                background: rgba(255, 255, 255, 0.95);
+                                backdrop-filter: blur(10px);
+                                border-radius: 10px;
+                                padding: 1rem;
+                                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+                                min-width: 200px;
+                                z-index: 20;
+                                border: 1px solid rgba(255, 255, 255, 0.3);
+                            }
+                            .info-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+                            .info-header h4 { margin: 0; color: #2d5016; }
+                            .species-badge { padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem; font-weight: bold; color: white; }
+                            .species-badge.cattle { background: #8B4513; }
+                            .species-badge.sheep { background: #4682B4; }
+                            .info-content p { margin: 0.3rem 0; font-size: 0.9rem; }
+                            .quality-indicator { padding: 0.1rem 0.3rem; border-radius: 4px; font-weight: bold; }
+                            .quality-indicator.excellent { background: #4CAF50; color: white; }
+                            .quality-indicator.good { background: #8BC34A; color: white; }
+                            .quality-indicator.fair { background: #FFC107; color: black; }
+                            .rotation-progress { height: 3px; background: rgba(255, 255, 255, 0.3); position: absolute; bottom: 0; left: 0; border-radius: 0 0 8px 0; }
+                            @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+                            @keyframes fadeOutDown { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(10px); } }
+                            @keyframes clickPulse { 0% { transform: scale(1); } 50% { transform: scale(1.3); } 100% { transform: scale(1.15); } }
+                        `;
+                        document.head.appendChild(styles);
+                    }
+                },
+
+                addTooltipStyles() {
+                    if (!document.querySelector('#tooltip-styles')) {
+                        const styles = document.createElement('style');
+                        styles.id = 'tooltip-styles';
+                        styles.textContent = `
+                            .sector-tooltip {
+                                position: fixed;
+                                background: rgba(0, 0, 0, 0.9);
+                                color: white;
+                                padding: 0.5rem;
+                                border-radius: 6px;
+                                font-size: 0.9rem;
+                                z-index: 1000;
+                                pointer-events: none;
+                                transform: translateX(-50%) translateY(-100%);
+                                white-space: nowrap;
+                            }
+                            .sector-tooltip::after {
+                                content: '';
+                                position: absolute;
+                                top: 100%;
+                                left: 50%;
+                                margin-left: -5px;
+                                border-width: 5px;
+                                border-style: solid;
+                                border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+                            }
+                        `;
+                        document.head.appendChild(styles);
+                    }
+                }
+            };
+
+            // Initialize the grazing map system
+            grazingMap.init();
+        });
+        </script>
+        <!-- Updated Health Dashboard with Sheep Metrics -->
+        <section class="health-monitor">
+            <h2>Real-Time Health Monitoring</h2>
+            <div class="health-grid">
+                <div class="health-card">
+                    <div class="vital-graph" id="weightChart"></div>
+                    <h3>Cattle Weight Gain</h3>
+                    <p>Last 30 Days: +45kg</p>
+                </div>
+                <div class="health-card sheep-health">
+                    <div class="health-metric">
+                        <div class="metric-circle" data-percent="92">
+                            <span>92%</span>
+                        </div>
+                        <p>Lamb Survival Rate</p>
+                    </div>
+                </div>
+                <div class="health-card sheep-health">
+                    <div class="vital-graph" id="woolChart"></div>
+                    <h3>Wool Production</h3>
+                    <p>Monthly Average: 2.8kg/sheep</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<style>
+    .health-monitor {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .health-monitor h2 {
+        text-align: center;
+        color: #2d5016;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+
+    .health-monitor h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, #8B4513, #4682B4);
+        border-radius: 3px;
+    }
+
+    .health-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .health-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .health-card:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: #8B4513;
+        transition: width 0.3s ease;
+    }
+
+    .sheep-health:before {
+        background: #4682B4;
+    }
+
+    .health-card:hover:before {
+        width: 8px;
+    }
+
+    .health-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .vital-graph {
+        height: 180px;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .health-card h3 {
+        color: #2d5016;
+        margin-top: 0;
+        font-size: 1.2rem;
+    }
+
+    .health-card p {
+        color: #6c757d;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .health-metric {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 180px;
+    }
+
+    .metric-circle {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 0 4px #fff, 0 0 0 8px #e9ecef;
+    }
+
+    .metric-circle span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #2d5016;
+        z-index: 2;
+    }
+
+    .metric-circle:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 8px solid transparent;
+        border-top-color: #8B4513;
+        animation: fillCircle 1.5s ease-in-out forwards;
+    }
+
+    .sheep-health .metric-circle:after {
+        border-top-color: #4682B4;
+    }
+
+    .metric-circle p {
+        position: absolute;
+        bottom: -30px;
+        text-align: center;
+        width: 100%;
+        font-weight: 500;
+    }
+
+    @keyframes fillCircle {
+        0% {
+            transform: rotate(0deg);
+            opacity: 0.7;
+        }
+        100% {
+            transform: rotate(360deg);
+            opacity: 1;
+        }
+    }
+
+    .tooltip {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 0.5rem 0.8rem;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 10;
+    }
+
+    .graph-tooltip {
+        background: rgba(255, 255, 255, 0.95);
+        color: #2d5016;
+        padding: 0.5rem;
+        border-radius: 4px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        font-size: 0.8rem;
+        border-left: 3px solid #8B4513;
+    }
+
+    .sheep-health .graph-tooltip {
+        border-left-color: #4682B4;
+    }
+
+    @media (max-width: 768px) {
+        .health-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .health-monitor {
+            padding: 1rem;
+        }
+    }
+    </style>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize health monitoring system
+        const healthMonitor = {
+            init() {
+                this.createWeightChart();
+                this.createWoolChart();
+                this.animateMetrics();
+                this.addHoverEffects();
+            },
+            
+            createWeightChart() {
+                const canvas = document.createElement('canvas');
+                canvas.width = 400;
+                canvas.height = 180;
+                document.getElementById('weightChart').appendChild(canvas);
+                const ctx = canvas.getContext('2d');
+                
+                // Data for cattle weight gain
+                const data = {
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                    values: [720, 735, 750, 765]
+                };
+                
+                this.drawLineChart(ctx, data, '#8B4513', 'Weight (kg)');
+            },
+            
+            createWoolChart() {
+                const canvas = document.createElement('canvas');
+                canvas.width = 400;
+                canvas.height = 180;
+                document.getElementById('woolChart').appendChild(canvas);
+                const ctx = canvas.getContext('2d');
+                
+                // Data for wool production
+                const data = {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+                    values: [2.5, 2.7, 2.8, 2.9]
+                };
+                
+                this.drawLineChart(ctx, data, '#4682B4', 'Kg per sheep');
+            },
+            
+            drawLineChart(ctx, data, color, label) {
+                const width = ctx.canvas.width;
+                const height = ctx.canvas.height;
+                const padding = 40;
+                const chartWidth = width - padding * 2;
+                const chartHeight = height - padding * 2;
+                
+                // Draw axes
+                ctx.beginPath();
+                ctx.strokeStyle = '#dee2e6';
+                ctx.lineWidth = 1;
+                
+                // Y-axis
+                ctx.moveTo(padding, padding);
+                ctx.lineTo(padding, height - padding);
+                
+                // X-axis
+                ctx.moveTo(padding, height - padding);
+                ctx.lineTo(width - padding, height - padding);
+                ctx.stroke();
+                
+                // Calculate scaling factors
+                const maxValue = Math.max(...data.values);
+                const minValue = Math.min(...data.values);
+                const valueRange = maxValue - minValue;
+                
+                const xScale = chartWidth / (data.labels.length - 1);
+                const yScale = chartHeight / valueRange;
+                
+                // Draw grid lines
+                ctx.beginPath();
+                ctx.strokeStyle = '#f1f3f5';
+                for (let i = 0; i < data.labels.length; i++) {
+                    const x = padding + i * xScale;
+                    ctx.moveTo(x, padding);
+                    ctx.lineTo(x, height - padding);
+                }
+                
+                for (let i = 0; i <= 5; i++) {
+                    const value = minValue + (valueRange / 5) * i;
+                    const y = height - padding - (value - minValue) * yScale;
+                    ctx.moveTo(padding, y);
+                    ctx.lineTo(width - padding, y);
+                }
+                ctx.stroke();
+                
+                // Draw data points and line
+                ctx.beginPath();
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 3;
+                ctx.lineJoin = 'round';
+                
+                for (let i = 0; i < data.values.length; i++) {
+                    const x = padding + i * xScale;
+                    const y = height - padding - (data.values[i] - minValue) * yScale;
+                    
+                    if (i === 0) {
+                        ctx.moveTo(x, y);
+                    } else {
+                        ctx.lineTo(x, y);
+                    }
+                    
+                    // Draw points
+                    ctx.beginPath();
+                    ctx.fillStyle = color;
+                    ctx.arc(x, y, 5, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Add labels
+                    ctx.fillStyle = '#6c757d';
+                    ctx.font = '12px sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(data.labels[i], x, height - padding + 20);
+                    
+                    // Add value labels
+                    ctx.textAlign = 'right';
+                    ctx.fillText(data.values[i] + (label.includes('Kg') ? '' : 'kg'), padding - 5, y);
+                }
+                
+                ctx.stroke();
+                
+                // Add chart title
+                ctx.fillStyle = '#2d5016';
+                ctx.font = 'bold 12px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(label, width / 2, padding - 10);
+            },
+            
+            animateMetrics() {
+                const metricCircle = document.querySelector('.metric-circle');
+                const percent = metricCircle.getAttribute('data-percent');
+                
+                // Animate the percentage counter
+                let current = 0;
+                const duration = 1500;
+                const increment = Math.ceil(percent / (duration / 20));
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= percent) {
+                        current = percent;
+                        clearInterval(timer);
+                    }
+                    metricCircle.querySelector('span').textContent = current + '%';
+                }, 20);
+            },
+            
+            addHoverEffects() {
+                const cards = document.querySelectorAll('.health-card');
+                
+                cards.forEach(card => {
+                    // Add tooltip on hover
+                    card.addEventListener('mouseenter', (e) => {
+                        this.showTooltip(e, card);
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        this.hideTooltip();
+                    });
+                    
+                    // Add click effect
+                    card.addEventListener('click', () => {
+                        this.animateClick(card);
+                    });
+                });
+            },
+            
+            showTooltip(e, card) {
+                let tooltipText = '';
+                
+                if (card.classList.contains('sheep-health')) {
+                    if (card.querySelector('.health-metric')) {
+                        tooltipText = 'Lamb survival rate based on recent data';
+                    } else {
+                        tooltipText = 'Monthly wool production trends';
+                    }
+                } else {
+                    tooltipText = 'Cattle weight gain over the last month';
+                }
+                
+                const tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                tooltip.textContent = tooltipText;
+                document.body.appendChild(tooltip);
+                
+                const rect = card.getBoundingClientRect();
+                tooltip.style.left = (rect.left + rect.width / 2 - tooltip.offsetWidth / 2) + 'px';
+                tooltip.style.top = (rect.top - tooltip.offsetHeight - 10) + 'px';
+                tooltip.style.opacity = '1';
+                
+                card.dataset.tooltip = tooltip;
+            },
+            
+            hideTooltip() {
+                const tooltips = document.querySelectorAll('.tooltip');
+                tooltips.forEach(tooltip => tooltip.remove());
+            },
+            
+            animateClick(card) {
+                card.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 200);
+            }
+        };
+        
+        // Initialize the health monitoring system
+        healthMonitor.init();
+    });
+    </script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chibsah Farms</h3>
+                    <p>Leading sustainable agriculture in Ghana's Ashanti and Eastern Region since 2020. We're committed to providing premium organic products while supporting local communities and preserving our environment.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" style="margin-right: 15px; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Products</h3>
+                    <ul>
+                        <li><a href="#products">Premium Livestock</a></li>
+                        <li><a href="#products">Free-Range Poultry</a></li>
+                        <li><a href="#products">Omega-3 Eggs</a></li>
+                        <li><a href="#products">Organic Avocados</a></li>
+                        <li><a href="#products">Ancient Grains</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Our Products</a></li>
+                        <li><a href="#certifications">Quality Standards</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Farm Tours</a></li>
+                        <li><a href="#contact">Wholesale Orders</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Head Office: Tse Addo High Street, Tebibiiano-Accra, Ghana</p>
+                    <p><i class="fas fa-phone"></i> +233 24 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@chibsahfarms.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</p>
+                </div>
             </div>
             
-            <div class="chat-input">
-                <textarea placeholder="Type your message here..." id="messageInput"></textarea>
-                <button class="send-button" onclick="sendMessage()">
-                    <i class="fab fa-whatsapp"></i>
-                </button>
+            <div class="footer-map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.7685312966087!2d-0.13367702656667513!3d5.6011745331969935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf85002c15cbbf%3A0xa1ba040430e91349!2sYAC%20GROUP!5e0!3m2!1sen!2sgh!4v1745158640118!5m2!1sen!2sgh"
+                    width="100%"
+                    height="350"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chibsah Farms. All rights reserved. | Sustainable Agriculture for a Healthier Future</p>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <button class="whatsapp-button" onclick="toggleChat()">
+    <!-- WhatsApp Button -->
+    <button class="whatsapp-button" onclick="openWhatsApp()">
         <i class="fab fa-whatsapp"></i>
     </button>
-</div>
 
-<style>
-/* WhatsApp Button Styles */
-.whatsapp-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top" title="Scroll to top"></button>
 
-.whatsapp-button i {
-    color: white;
-    font-size: 32px;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-}
-
-/* Chat Popup Styles */
-.chat-popup {
-    position: fixed;
-    bottom: 100px;
-    right: 30px;
-    width: 350px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
-    transform: scale(0);
-    transform-origin: bottom right;
-    transition: all 0.3s ease;
-    font-family: Arial, sans-serif;
-}
-
-.chat-popup.active {
-    transform: scale(1);
-}
-
-.chat-header {
-    background: #075E54;
-    color: white;
-    padding: 15px;
-    border-radius: 15px 15px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.chat-agent {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.chat-agent img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.agent-info h4 {
-    margin: 0;
-    font-size: 14px;
-}
-
-.agent-info p {
-    margin: 3px 0 0;
-    font-size: 12px;
-    opacity: 0.8;
-}
-
-.close-chat {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0 5px;
-}
-
-.chat-body {
-    padding: 15px;
-}
-
-.chat-message {
-    background: #f0f2f5;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.chat-message p {
-    margin: 0;
-    font-size: 14px;
-}
-
-.chat-message small {
-    display: block;
-    text-align: right;
-    font-size: 10px;
-    color: #666;
-    margin-top: 5px;
-}
-
-.chat-input {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.chat-input textarea {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    resize: none;
-    height: 40px;
-    font-size: 14px;
-}
-
-.send-button {
-    background: #25D366;
-    border: none;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@media (max-width: 480px) {
-    .chat-popup {
-        width: 90%;
-        right: 5%;
-        bottom: 80px;
-    }
-}
-</style>
-
-<script>
-let chatVisible = false;
-let chatTimeInterval = null;
-
-function getCurrentGMTTime() {
-    const options = {
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true,
-        timeZone: 'GMT',
-        timeZoneName: 'short'
-    };
-    return new Date().toLocaleTimeString('en-US', options);
-}
-
-function updateChatTime() {
-    const timeElement = document.getElementById('messageTime');
-    if(timeElement) {
-        timeElement.textContent = getCurrentGMTTime();
-    }
-}
-
-function toggleChat() {
-    const popup = document.getElementById('chatPopup');
-    chatVisible = !chatVisible;
-    popup.classList.toggle('active', chatVisible);
-    
-    if(chatVisible) {
-        updateChatTime();
-        chatTimeInterval = setInterval(updateChatTime, 60000);
-    } else {
-        clearInterval(chatTimeInterval);
-    }
-}
-
-function sendMessage() {
-    const message = document.getElementById('messageInput').value;
-    const phoneNumber = "+233123456789"; // Replace with Chibsah's WhatsApp number
-    const encodedMessage = encodeURIComponent(message || "Hello Chibsah Farms, I have a question");
-    
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-    toggleChat();
-}
-
-document.addEventListener('click', (e) => {
-    const popup = document.getElementById('chatPopup');
-    const button = document.querySelector('.whatsapp-button');
-    
-    if (!popup.contains(e.target) && !button.contains(e.target) && chatVisible) {
-        toggleChat();
-        clearInterval(chatTimeInterval);
-    }
-});
-</script>
-
-<!-- HTML -->
-<footer class="site-footer">
-    <div class="footer-container">
-        <!-- Left Section: Logo & Social -->
-        <div class="footer-left">
-            <img src="images/logo.png" alt="Chibsah Farms Logo" class="footer-logo">
-            <div class="social-links">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-
-        <!-- Center Sections: Links -->
-        <div class="footer-center">
-            <div class="link-column">
-                <h4>Our Farms</h4>
-                <ul>
-                    <li><a href="grain-farms.html">Grain Farm</a></li>
-                    <li><a href="poultry-farms.html">Poultry Farm</a></li>
-                    <li><a href="avocado-farms.html">Avocado Farm</a></li>
-                    <li><a href="livestock-farms.html">Livestock</a></li>
-                </ul>
-            </div>
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.querySelector('.mobile-menu-toggle i');
             
-            <div class="link-column">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
+            navMenu.classList.toggle('active');
+            
+            if (navMenu.classList.contains('active')) {
+                menuToggle.classList.remove('fa-bars');
+                menuToggle.classList.add('fa-times');
+            } else {
+                menuToggle.classList.remove('fa-times');
+                menuToggle.classList.add('fa-bars');
+            }
+        }
 
-        <!-- Right Section: Map -->
-        <div class="footer-right">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.7685312966087!2d-0.13367702656667513!3d5.6011745331969935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf85002c15cbbf%3A0xa1ba040430e91349!2sYAC%20GROUP!5e0!3m2!1sen!2sgh!4v1745158640118!5m2!1sen!2sgh"
-                class="footer-map"
-                allowfullscreen
-                loading="lazy">
-            </iframe>
-        </div>
-    </div>
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navMenu = document.getElementById('navMenu');
+                    const menuToggle = document.querySelector('.mobile-menu-toggle i');
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        menuToggle.classList.remove('fa-times');
+                        menuToggle.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
 
-    <!-- Copyright -->
-    <div class="footer-bottom">
-        <p>&copy; 2025 Chibsah Farms | YAC Group Subsidiary</p>
-    </div>
-</footer>
+        // Active Navigation Link
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
 
-	</body>
+        // WhatsApp Function
+        function openWhatsApp() {
+            const message = "Hello Chibsah Farms, I would like to get more information about your products.";
+            const phoneNumber = "+233241234567";
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Scroll to Top Functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    		<!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+</body>
 </html>
