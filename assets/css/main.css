@@ -284,7 +284,7 @@ p {
   margin: 0 0 2em 0;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -295,7 +295,7 @@ h6 {
   font-weight: 700;
   line-height: 1.5;
   margin: 0 0 1em 0;
-}
+} */
 h1 a,
 h2 a,
 h3 a,
@@ -307,15 +307,15 @@ h6 a {
   border-bottom: 0;
 }
 
-h1 {
+/* h1 {
   font-size: 4em;
   margin: 0 0 0.5em 0;
   line-height: 1.3;
-}
+} */
 
-h2 {
+/* h2 {
   font-size: 1.75em;
-}
+} */
 /* header {
   text-align: center;
 } */
@@ -336,11 +336,11 @@ h6 {
   font-size: 0.7em;
 }
 
-@media screen and (max-width: 1680px) {
+/* @media screen and (max-width: 1680px) {
   h1 {
     font-size: 3.5em;
   }
-}
+} */
 
 @media screen and (max-width: 980px) {
   h1 {
@@ -4033,14 +4033,14 @@ button:disabled,
   overflow: hidden;
 }
 
-.hero-overlay {
+/* .hero-overlay {
   position: relative;
   z-index: 1;
   text-align: center;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-}
+} */
 
 .live-counters {
   display: flex;

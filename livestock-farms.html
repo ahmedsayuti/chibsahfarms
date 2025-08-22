@@ -234,7 +234,149 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
+                /* Hero Section Styles */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
 
+        .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide:nth-child(1) {
+            background-image: url('https://plus.unsplash.com/premium_photo-1663011279090-63d0e5d9e5c7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhdHRsZXxlbnwwfHwwfHx8MA%3D%3D');
+        }
+
+        .slide:nth-child(2) {
+            background-image: url('https://plus.unsplash.com/premium_photo-1691030658378-acdaab929bed?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        }
+
+        .slide:nth-child(3) {
+            background-image: url('https://plus.unsplash.com/premium_photo-1664304299664-a8e2e2f80290?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 3;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #7ed321;
+            color: #2d5016;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(126, 211, 33, 0.3);
+        }
+
+        .hero-cta:hover {
+            background: #6bc91a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(126, 211, 33, 0.4);
+        }
+
+        .slide-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 4;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #7ed321;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .hero-cta {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
         /* Footer */
         footer {
             background: #1a2f0f;
@@ -496,14 +638,15 @@
                     </div>
                     
                     <ul class="nav-menu" id="navMenu">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="#products">Products</a></li>
                         <li><a href="#certifications">Quality</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
                     </ul>
                     
-                    <a href="#contact" class="cta-button">Get Quote</a>
+                    <a href="contact.html" class="cta-button">Get Quote</a>
                     <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -511,9 +654,30 @@
             </div>
         </nav>
     </header>
-
+                <!-- New Hero Section -->
+        <section class="hero">
+            <div class="slideshow">
+                <div class="slide active"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+            </div>
+            
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Premium Livestock Excellence</h1>
+                    <p>Grass-fed, ethically raised cattle and sheep from Ghana's heartland</p>
+                    <a href="#breeds" class="hero-cta">Explore Our Herds</a>
+                </div>
+            </div>
+            
+            <div class="slide-indicators">
+                <div class="indicator active" data-index="0"></div>
+                <div class="indicator" data-index="1"></div>
+                <div class="indicator" data-index="2"></div>
+            </div>
+        </section>
         <!-- Updated Breed Carousel with Sheep Breeds -->
-        <section class="breed-showcase">
+        <section class="breed-showcase" id="breeds">
             <h1><center>Our Heritage Breeds</center></h1>
             <div class="breed-carousel">
                 <!-- Cattle Breed -->
@@ -1718,23 +1882,23 @@
                 <div class="footer-section">
                     <h3>Our Products</h3>
                     <ul>
-                        <li><a href="#products">Premium Livestock</a></li>
-                        <li><a href="#products">Free-Range Poultry</a></li>
-                        <li><a href="#products">Omega-3 Eggs</a></li>
-                        <li><a href="#products">Organic Avocados</a></li>
-                        <li><a href="#products">Ancient Grains</a></li>
+                        <li><a href="livestock-farms.html">Premium Livestock</a></li>
+                        <li><a href="poultry-farms.html">Free-Range Poultry</a></li>
+                        <li><a href="poultry-farms.html">Omega-3 Eggs</a></li>
+                        <li><a href="avocado-farms.html">Organic Avocados</a></li>
+                        <li><a href="grain-farms.html">Ancient Grains</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#products">Our Products</a></li>
-                        <li><a href="#certifications">Quality Standards</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#">Farm Tours</a></li>
-                        <li><a href="#contact">Wholesale Orders</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">Our Products</a></li>
+                        <li><a href="about.html">Quality Standards</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">Farm Tours</a></li>
+                        <li><a href="contact.html">Wholesale Orders</a></li>
                     </ul>
                 </div>
                 
@@ -1834,7 +1998,42 @@
                 }
             });
         });
-
+                // Slideshow functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentSlide = 0;
+            
+            // Function to show a specific slide
+            function showSlide(index) {
+                // Remove active class from all slides and indicators
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+                
+                // Add active class to current slide and indicator
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                
+                currentSlide = index;
+            }
+            
+            // Function to show next slide
+            function nextSlide() {
+                let nextIndex = (currentSlide + 1) % slides.length;
+                showSlide(nextIndex);
+            }
+            
+            // Set up automatic slideshow
+            setInterval(nextSlide, 5000);
+            
+            // Add click events to indicators
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    let slideIndex = parseInt(this.getAttribute('data-index'));
+                    showSlide(slideIndex);
+                });
+            });
+        });
         // WhatsApp Function
         function openWhatsApp() {
             const message = "Hello Chibsah Farms, I would like to get more information about your products.";
@@ -1861,5 +2060,6 @@
             });
         });
     </script>
+
 </body>
 </html>
