@@ -1,613 +1,1928 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Poultry Farms</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chibsah Farms - Premium organic poultry, eggs, and livestock from Ghana's Ashanti Region. Sustainable agriculture for a healthier future."
+    />
+    <meta
+      name="keywords"
+      content="organic farming, Ghana agriculture, poultry, eggs, sustainable farming, Ashanti Region"
+    />
+    <title>Chibsah Premium Poultry</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Apple Devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-					<!-- Basic Favicon -->
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="shortcut icon" href="/favicon.ico">
-		
-		<!-- Apple Devices -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		
-		<!-- Android/Chrome -->
-		<link rel="manifest" href="/site.webmanifest">
-		
-		<!-- Microsoft Tiles -->
-		<meta name="msapplication-config" content="/browserconfig.xml">
+    <!-- Android/Chrome -->
+    <link rel="manifest" href="/site.webmanifest" />
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #2d5016;
+        --secondary: #7ed321;
+        --accent: #ff9800;
+        --light: #f8f9fa;
+        --dark: #333;
+        --transition: all 0.3s ease;
+      }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+      body {
+        font-family: "Inter", sans-serif;
+        color: #333;
+        line-height: 1.6;
+        overflow-x: hidden;
+        background: linear-gradient(45deg, #f8faf5 0%, #ffffff 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><img src="images/logo.png" alt="Chibsah Farms Logo"></a>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									</ul>
-								</header>
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
 
-								<!-- Poultry Hero Section -->
-                            <section class="poultry-hero">
-                                <div class="hero-overlay">
-                                    <h1>Chibsah Premium Poultry</h1>
-                                    <p>Ghana's Leader in Antibiotic-Free Poultry Production</p>
-                                    <div class="live-counters">
-                                        <div class="counter">
-                                            <i class="fas fa-egg"></i>
-                                            <span class="count" data-target="85000">85000</span>
-                                            <div class="loading-bar"></div>
-                                            <span>Eggs Daily</span>
-                                        </div>
-                                        <div class="counter">
-                                            <i class="fas fa-drumstick-bite"></i>
-                                            <span class="count" data-target="12000">12000</span>
-                                            <span>Chickens Weekly</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-                            <!-- Product Showcase -->
-                            <section class="product-showcase">
-                                <h2>Our Poultry Products</h2>
-                                <div class="tab-content active" id="eggs">
-                                    <div class="product-card">
-                                        <div class="product-image">
-                                            <img src="images/pic05.jpg" alt="Egg Crates">
-                                            <div class="product-overlay">
-                                                <h3>Nutrition Facts</h3>
-                                                <ul class="nutrition-list">
-                                                    <li>Omega-3: 150mg</li>
-                                                    <li>Protein: 6g</li>
-                                                    <li>Vitamin D: 41IU</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product-actions">
-                                            <button class="quick-order">Quick Order</button>
-                                            <button class="view-details">View Certifications</button>
-                                        </div>
-                                    </div>
-                                </div>
+      /* Header Styles */
+      header {
+        background: linear-gradient(135deg, #828580 0%, #4a7c27 100%);
+        color: rgb(47, 47, 47);
+        position: relative;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.427);
+      }
 
-                                <div class="tab-content" id="meat">
-                                <div class="product-card">
-                                <div class="product-image">
-                                    <img src="images/poultry-meat.jpg" alt="Fresh Poultry Meat">
-                                    <div class="product-overlay">
-                                        <h3>Quality Specs</h3>
-                                        <ul class="nutrition-list">
-                                            <li>Protein: 25g per 100g</li>
-                                            <li>Fat Content: 3-5%</li>
-                                            <li>Certified Antibiotic-Free</li>
-                                            <li>Air-Chilled Processing</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-actions">
-                                    <button class="quick-order">Bulk Order</button>
-                                    <button class="view-details">Cut Selection</button>
-                                </div>
-                            </div>
-                                </div>
-                            </section>
+      .top-bar {
+        background: rgba(70, 104, 88, 0.2);
+        padding: 8px 0;
+        font-size: 0.9rem;
+      }
 
-                            <!-- Farming Process -->
-                            <section class="poultry-process">
-                                <h2>Our 7-Step Ethical Farming Cycle</h2>
-                                <div class="process-wheel">
-                                    <!-- Hatching -->
-                                    <div class="process-step" style="--angle: 0deg">
-                                        <div class="step-content">
-                                            <i class="fas fa-egg"></i>
-                                            <h3>Hatching</h3>
-                                            <p>Climate-controlled hatcheries with 99% viability rate</p>
-                                            <ul class="process-details">
-                                                <li>24/7 embryo monitoring</li>
-                                                <li>ISO-certified incubation</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+      .top-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
 
-                                    <!-- Rearing -->
-                                    <div class="process-step" style="--angle: 51.43deg">
-                                        <div class="step-content">
-                                            <i class="fas fa-kiwi-bird"></i>
-                                            <h3>Free-Range Rearing</h3>
-                                            <p>Open-air poultry houses with 1m²/bird space</p>
-                                            <ul class="process-details">
-                                                <li>Natural light cycles</li>
-                                                <li>Predator-proof environments</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+      .contact-info {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
 
-                                    <!-- Nutrition -->
-                                    <div class="process-step" style="--angle: 102.86deg">
-                                        <div class="step-content">
-                                            <i class="fas fa-seedling"></i>
-                                            <h3>Organic Nutrition</h3>
-                                            <p>Custom-formulated non-GMO feed</p>
-                                            <ul class="process-details">
-                                                <li>21% protein content</li>
-                                                <li>Herbal growth supplements</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+      .contact-info span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      /* Contact Section */
+      .contact {
+        padding: 100px 0;
+        background: #f8faf5;
+      }
 
-                                    <!-- Health -->
-                                    <div class="process-step" style="--angle: 154.29deg">
-                                        <div class="step-content">
-                                            <i class="fas fa-heartbeat"></i>
-                                            <h3>Health Monitoring</h3>
-                                            <p>Daily welfare checks by veterinarians</p>
-                                            <ul class="process-details">
-                                                <li>Vaccination programs</li>
-                                                <li>Stress-reduction protocols</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+      .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        margin-top: 60px;
+      }
 
-                                    <!-- Harvesting -->
-                                    <div class="process-step" style="--angle: 205.71deg">
-                                        <div class="step-content">
-                                            <i class="fas fa-hand-holding-heart"></i>
-                                            <h3>Ethical Harvesting</h3>
-                                            <p>Humane processing certified by AWIN</p>
-                                            <ul class="process-details">
-                                                <li>Stun-before-processing</li>
-                                                <li>Zero-waste practices</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+      .contact-info {
+        padding: 10px;
+        background: rgb(200, 219, 181);
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
 
-                                    <!-- Traceability -->
-                                    <div class="process-step" style="--angle: 257.14deg">
-                                        <div class="step-content">
-                                            <i class="fas fa-qrcode"></i>
-                                            <h3>Full Traceability</h3>
-                                            <p>Blockchain-tracked from farm to table</p>
-                                            <ul class="process-details">
-                                                <li>Unique batch IDs</li>
-                                                <li>Real-time quality logs</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 25px 0;
+        border-bottom: 1px solid #eee;
+      }
 
-                                    <!-- Renewal -->
-                                    <div class="process-step" style="--angle: 308.57deg">
-                                        <div class="step-content">
-                                            <i class="fas fa-recycle"></i>
-                                            <h3>Eco-Renewal</h3>
-                                            <p>Closed-loop waste management</p>
-                                            <ul class="process-details">
-                                                <li>Manure-to-biogas conversion</li>
-                                                <li>Water recycling systems</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+      .contact-item:last-child {
+        border-bottom: none;
+      }
 
-                                    <div class="wheel-center">
-                                        <img src="images/logo.png" alt="Chibsah Farms Seal">
-                                        <p>Ethical Poultry Promise</p>
-                                    </div>
-                                </div>
-                            </section>
+      .contact-item i {
+        font-size: 1.5rem;
+        color: #7ed321;
+        margin-top: 5px;
+      }
 
-                            <!-- Quality Assurance -->
-                            <section class="quality-check">
-                                <h2>360° Quality Control</h2>
-                                <div class="check-grid">
-                                    <div class="check-card">
-                                        <div class="check-visual">
-                                            <div class="temperature-gauge"></div>
-                                        </div>
-                                        <h3>Cold Chain Monitoring</h3>
-                                        <p>Real-time temperature tracking</p>
-                                    </div>
-                                    <!-- Add more quality checks -->
-                                </div>
-                            </section>
+      .contact-details h4 {
+        color: #2d5016;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+      }
 
-                            <!-- Interactive Gallery -->
-                            <section class="poultry-gallery">
-                                <div class="gallery-container">
-                                    <div class="gallery-item" data-category="hatchery">
-                                        <img src="images/hatchery.jpg" alt="Hatchery">
-                                        <div class="gallery-caption">
-                                            <h3>Modern Hatchery</h3>
-                                            <button class="virtual-tour">Virtual Tour</button>
-                                        </div>
-                                    </div>
-                                    <!-- More gallery items -->
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                    
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+      .contact-details p {
+        color: #666;
+        line-height: 1.6;
+      }
 
-							<!-- Search -->
-							<section id="search" class="alt">
-								<div class="search-container">
-									<form onsubmit="event.preventDefault(); performSearch();">
-										<input 
-											type="text" 
-											id="searchInput" 
-											name="query" 
-											placeholder="Search farms, products, or articles..."
-											aria-label="Website Search"
-										>
-										<div id="searchResults" class="search-results"></div>
-									</form>
-								</div>
-							</section>
+      .social-links a {
+        color: white;
+        font-size: 2rem;
+        margin-left: 15px;
+        transition: color 0.3s ease;
+      }
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="contact.html">Contact Us</a></li>
-										<li>
-											<span class="opener">Our Farms</span>
-											<ul>
-												<li><a href="avocado-farms.html">Avocado Farms</a></li>
-												<li><a href="grain-farms.html">Grain Farms</a></li>
-												<li><a href="poultry-farms.html">Poultry Farms</a></li>
-												<li><a href="livestock-farms.html">Livestock Farms</a></li>
-											</ul>
-										</li>
-										
-										<li><a href="faq.html">FAQ</a></li>
-										<li><a href="#">Privacy Policy</a></li>
-								</nav>
+      .social-links a:hover {
+        color: #7ed321;
+      }
 
-							<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Get in touch</h2>
-								</header>
-								<p>Contact us for any of our farm produce</p>
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">Info: info@chibsahfarms.com<br>
-										Support: support@chibsahfarms.com</a></li>
-									<li class="icon solid fa-phone">(000) 000-0000</li>
-									<li class="icon solid fa-home"> JV29+FH6, Tse Addo High Street,<br />
-									Accra, Ghana</li>
-								</ul>
-							</section>
+      .navbar {
+        padding: 1px 0;
+      }
 
-							<!-- Footer -->
-							<footer id="footer">
-								<p class="copyright">&copy; 2025 Chibsah Farms. All rights reserved.</p>
-							</footer>
+      .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-						</div>
-					</div>
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
 
-			</div>
-<!-- WhatsApp Chat Widget -->
-<div class="whatsapp-widget">
-    <div class="chat-popup" id="chatPopup">
-        <div class="chat-header">
-            <div class="chat-agent">
-                <img src="images/logo.png" alt="Chibsah Farms">
-                <div class="agent-info">
-                    <h4>Chibsah Farms Support</h4>
-                    <p>Typically replies within minutes</p>
-                </div>
+      .logo img {
+        height: 130px;
+        max-width: 100%;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .nav-menu a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .nav-menu a:hover,
+      .nav-menu a.active {
+        color: #7ed321;
+      }
+
+      .nav-menu a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #7ed321;
+        transition: width 0.3s ease;
+      }
+
+      .nav-menu a:hover::after {
+        width: 100%;
+      }
+
+      .cta-button {
+        background: #7ed321;
+        color: #2d5016;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(126, 211, 33, 0.3);
+      }
+
+      .cta-button:hover {
+        background: #6bc91a;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(126, 211, 33, 0.4);
+      }
+
+      .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .poultry-hero {
+        height: 100vh;
+        min-height: 600px;
+        background: linear-gradient(
+            rgba(45, 80, 22, 0.7),
+            rgba(45, 80, 22, 0.8)
+          ),
+          url("https://images.unsplash.com/photo-1590065480004-477ef6d4d7d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-overlay {
+        max-width: 800px;
+        z-index: 2;
+        padding: 2rem;
+        animation: fadeIn 1.5s ease-out;
+      }
+
+      .poultry-hero h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        margin-bottom: 1.5rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .poultry-hero p {
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+        margin-bottom: 3rem;
+        font-weight: 300;
+      }
+
+      .live-counters {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+      }
+
+      .counter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 1.5rem;
+        border-radius: 15px;
+        min-width: 150px;
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+        transition: var(--transition);
+      }
+
+      .counter:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      .counter i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--secondary);
+      }
+
+      .count {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: white;
+      }
+
+      /* Product Showcase */
+      .product-showcase {
+        padding: 4rem 0;
+        background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+      }
+
+      .product-showcase h2 {
+        text-align: center;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .product-showcase h2::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--secondary);
+      }
+
+      .product-tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .tab-btn {
+        padding: 1rem 2rem;
+        background: white;
+        border: none;
+        border-radius: 50px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .tab-btn.active {
+        background: var(--primary);
+        color: white;
+      }
+
+      .tab-btn:hover:not(.active) {
+        background: var(--secondary);
+        color: white;
+      }
+
+      .tab-content {
+        display: none;
+        animation: fadeIn 0.5s ease-out;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .product-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-image {
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+      }
+
+      .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .product-card:hover .product-image img {
+        transform: scale(1.05);
+      }
+
+      .product-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(45, 80, 22, 0.9));
+        padding: 2rem;
+        color: white;
+        transform: translateY(100%);
+        transition: var(--transition);
+      }
+
+      .product-card:hover .product-overlay {
+        transform: translateY(0);
+      }
+
+      .nutrition-list {
+        list-style: none;
+        margin-top: 1rem;
+      }
+
+      .nutrition-list li {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .nutrition-list li::before {
+        content: "✓";
+        margin-right: 0.5rem;
+        color: var(--secondary);
+      }
+
+      .product-actions {
+        padding: 1.5rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .quick-order,
+      .view-details {
+        flex: 1;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 50px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .quick-order {
+        background: var(--primary);
+        color: white;
+      }
+
+      .quick-order:hover {
+        background: var(--secondary);
+      }
+
+      .view-details {
+        background: transparent;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+      }
+
+      .view-details:hover {
+        background: var(--primary);
+        color: white;
+      }
+
+      /* Farming Process - Responsive Redesign */
+      .poultry-process {
+        padding: 4rem 0;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        margin: 1.5rem auto;
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .poultry-process h2 {
+        text-align: center;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        margin-bottom: 2.5rem;
+        position: relative;
+        padding-bottom: 0.8rem;
+      }
+
+      .poultry-process h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--secondary);
+        border-radius: 2px;
+      }
+
+      .process-container {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .process-visualization {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .circular-diagram {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+      }
+
+      .process-ring {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 12px solid rgba(126, 211, 33, 0.1);
+        box-shadow: 0 0 0 8px rgba(126, 211, 33, 0.05);
+      }
+
+      .process-segment {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotate(var(--angle));
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .segment-content {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%) rotate(calc(-1 * var(--angle)));
+        width: 30%;
+        max-width: 140px;
+        text-align: center;
+        padding: 1rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: var(--transition);
+        border-left: 4px solid var(--secondary);
+      }
+
+      .process-segment.active .segment-content,
+      .process-segment:hover .segment-content {
+        transform: translateX(-50%) rotate(calc(-1 * var(--angle))) scale(1.08);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        z-index: 10;
+        border-left: 4px solid var(--accent);
+      }
+
+      .segment-content i {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        color: var(--secondary);
+        margin-bottom: 0.8rem;
+        background: rgba(126, 211, 33, 0.1);
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        transition: var(--transition);
+      }
+
+      .process-segment.active .segment-content i,
+      .process-segment:hover .segment-content i {
+        background: rgba(255, 152, 0, 0.1);
+        color: var(--accent);
+      }
+
+      .segment-content h3 {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+      }
+
+      .process-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        max-width: 150px;
+        aspect-ratio: 1/1;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 0 10px rgba(126, 211, 33, 0.1),
+          0 0 0 20px rgba(126, 211, 33, 0.05);
+        z-index: 5;
+        transition: var(--transition);
+      }
+
+      .process-center img {
+        width: 50%;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 0.5rem;
+      }
+
+      .process-center p {
+        font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      .detail-panel {
+        width: 100%;
+        max-width: 600px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        padding: 1.8rem;
+        transition: var(--transition);
+        text-align: left;
+        margin: 0 auto;
+      }
+
+      .detail-panel h3 {
+        color: var(--accent);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .detail-panel h3 i {
+        font-size: 1.6rem;
+      }
+
+      .detail-panel p {
+        margin-bottom: 1.2rem;
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .detail-list {
+        list-style: none;
+      }
+
+      .detail-list li {
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: flex-start;
+        padding: 0.3rem 0;
+        font-size: 0.9rem;
+      }
+
+      .detail-list li::before {
+        content: "✓";
+        margin-right: 0.8rem;
+        color: var(--secondary);
+        font-size: 1.1rem;
+        font-weight: bold;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .step-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .step-indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ddd;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .step-indicator.active {
+        background: var(--accent);
+        transform: scale(1.2);
+      }
+
+      /* Interactive Gallery */
+      .poultry-gallery {
+        padding: 4rem 0;
+        background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+      }
+
+      .poultry-gallery h2 {
+        text-align: center;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .poultry-gallery h2::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--secondary);
+      }
+
+      .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .gallery-item {
+        position: relative;
+        height: 250px;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .gallery-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        color: white;
+        padding: 1.5rem;
+        transform: translateY(100%);
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover .gallery-caption {
+        transform: translateY(0);
+      }
+
+      .virtual-tour {
+        margin-top: 1rem;
+        padding: 0.5rem 1.5rem;
+        background: var(--secondary);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .virtual-tour:hover {
+        background: var(--primary);
+      }
+
+      /* Footer */
+      footer {
+        background: #1a2f0f;
+        color: white;
+        padding: 60px 0 30px;
+        margin-top: auto;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-section h3 {
+        color: #7ed321;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+      }
+
+      .footer-section p,
+      .footer-section li {
+        color: #ccc;
+        line-height: 1.7;
+        margin-bottom: 10px;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section a:hover {
+        color: #7ed321;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid #333;
+        color: #888;
+      }
+
+      /* WhatsApp Button Styles */
+      .whatsapp-button {
+        position: fixed;
+        bottom: 70px;
+        right: 50px;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+      }
+
+      .whatsapp-button i {
+        color: white;
+        font-size: 32px;
+      }
+
+      .whatsapp-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+      }
+
+      /* Scroll to Top Button Styles */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 15px;
+        right: 54px;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #59638b 0%, #175133 100%);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px) scale(0.8);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+      }
+
+      .scroll-to-top::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 12px solid white;
+        transition: transform 0.3s ease;
+      }
+
+      /* Show button when scrolled */
+      .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+      }
+
+      /* Hover effects */
+      .scroll-to-top:hover {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+        transform: translateY(-2px) scale(1.05);
+      }
+
+      .scroll-to-top:hover::before {
+        transform: translateY(-2px);
+      }
+
+      /* Footer Map */
+      .footer-map-wrapper {
+        margin: 40px 0;
+      }
+
+      .footer-map-wrapper iframe {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        min-height: 350px;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.03);
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+
+      .process-center.pulse {
+        animation: pulse 3s ease-in-out infinite;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .circular-diagram {
+          max-width: 400px;
+        }
+
+        .segment-content {
+          width: 35%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 15px;
+        }
+
+        .top-bar-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 10px;
+        }
+
+        .contact-info {
+          justify-content: center;
+          gap: 15px;
+        }
+
+        .nav-content {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          gap: 15px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .mobile-menu-toggle {
+          display: block;
+        }
+
+        .logo img {
+          height: 100px;
+        }
+
+        .poultry-hero {
+          min-height: 500px;
+        }
+
+        .live-counters {
+          gap: 1rem;
+        }
+
+        .counter {
+          min-width: 120px;
+          padding: 1rem;
+        }
+
+        .counter i {
+          font-size: 2rem;
+        }
+
+        .count {
+          font-size: 2rem;
+        }
+
+        .circular-diagram {
+          max-width: 350px;
+        }
+
+        .segment-content {
+          width: 40%;
+          padding: 0.8rem;
+        }
+
+        .segment-content i {
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+          margin-bottom: 0.5rem;
+        }
+
+        .process-center {
+          width: 35%;
+        }
+
+        .whatsapp-button {
+          bottom: 20px;
+          right: 20px;
+          width: 50px;
+          height: 50px;
+        }
+
+        .whatsapp-button i {
+          font-size: 24px;
+        }
+
+        .scroll-to-top {
+          bottom: 20px;
+          right: 20px;
+          width: 45px;
+          height: 45px;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .contact-info {
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .contact-info span {
+          justify-content: center;
+        }
+
+        .poultry-hero {
+          min-height: 400px;
+        }
+
+        .counter {
+          min-width: 100px;
+          padding: 0.8rem;
+        }
+
+        .counter i {
+          font-size: 1.5rem;
+        }
+
+        .count {
+          font-size: 1.5rem;
+        }
+
+        .product-tabs {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .tab-btn {
+          width: 100%;
+          max-width: 250px;
+        }
+
+        .circular-diagram {
+          max-width: 280px;
+        }
+
+        .segment-content {
+          width: 45%;
+          padding: 0.6rem;
+        }
+
+        .segment-content i {
+          font-size: 1.1rem;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+        }
+
+        .segment-content h3 {
+          font-size: 0.75rem;
+        }
+
+        .process-center {
+          width: 40%;
+        }
+
+        .detail-panel {
+          padding: 1.2rem;
+        }
+
+        .detail-panel h3 {
+          font-size: 1.1rem;
+        }
+
+        .detail-list li {
+          font-size: 0.85rem;
+        }
+
+        .gallery-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="top-bar">
+        <div class="container">
+          <div class="top-bar-content">
+            <div class="contact-info">
+              <span><i class="fas fa-phone"></i> +233 24 123 4567</span>
+              <span><i class="fas fa-envelope"></i> info@chibsahfarms.com</span>
+              <span
+                ><i class="fas fa-map-marker-alt"></i> Head Office: Tse Addo
+                High Street, Tebibiiano-Accra, Ghana</span
+              >
             </div>
-            <button class="close-chat" onclick="toggleChat()">×</button>
-        </div>
-        
-        <div class="chat-body">
-            <div class="chat-message">
-                <p>Hello! 🌱 How can we help you today?</p>
-                <small id="messageTime"></small>
-            </div>
-            
-            <div class="chat-input">
-                <textarea placeholder="Type your message here..." id="messageInput"></textarea>
-                <button class="send-button" onclick="sendMessage()">
-                    <i class="fab fa-whatsapp"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <button class="whatsapp-button" onclick="toggleChat()">
-        <i class="fab fa-whatsapp"></i>
-    </button>
-</div>
-
-<style>
-/* WhatsApp Button Styles */
-.whatsapp-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.whatsapp-button i {
-    color: white;
-    font-size: 32px;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-}
-
-/* Chat Popup Styles */
-.chat-popup {
-    position: fixed;
-    bottom: 100px;
-    right: 30px;
-    width: 350px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
-    transform: scale(0);
-    transform-origin: bottom right;
-    transition: all 0.3s ease;
-    font-family: Arial, sans-serif;
-}
-
-.chat-popup.active {
-    transform: scale(1);
-}
-
-.chat-header {
-    background: #075E54;
-    color: white;
-    padding: 15px;
-    border-radius: 15px 15px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.chat-agent {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.chat-agent img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.agent-info h4 {
-    margin: 0;
-    font-size: 14px;
-}
-
-.agent-info p {
-    margin: 3px 0 0;
-    font-size: 12px;
-    opacity: 0.8;
-}
-
-.close-chat {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0 5px;
-}
-
-.chat-body {
-    padding: 15px;
-}
-
-.chat-message {
-    background: #f0f2f5;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.chat-message p {
-    margin: 0;
-    font-size: 14px;
-}
-
-.chat-message small {
-    display: block;
-    text-align: right;
-    font-size: 10px;
-    color: #666;
-    margin-top: 5px;
-}
-
-.chat-input {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.chat-input textarea {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    resize: none;
-    height: 40px;
-    font-size: 14px;
-}
-
-.send-button {
-    background: #25D366;
-    border: none;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@media (max-width: 480px) {
-    .chat-popup {
-        width: 90%;
-        right: 5%;
-        bottom: 80px;
-    }
-}
-</style>
-
-<script>
-let chatVisible = false;
-let chatTimeInterval = null;
-
-function getCurrentGMTTime() {
-    const options = {
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true,
-        timeZone: 'GMT',
-        timeZoneName: 'short'
-    };
-    return new Date().toLocaleTimeString('en-US', options);
-}
-
-function updateChatTime() {
-    const timeElement = document.getElementById('messageTime');
-    if(timeElement) {
-        timeElement.textContent = getCurrentGMTTime();
-    }
-}
-
-function toggleChat() {
-    const popup = document.getElementById('chatPopup');
-    chatVisible = !chatVisible;
-    popup.classList.toggle('active', chatVisible);
-    
-    if(chatVisible) {
-        updateChatTime();
-        chatTimeInterval = setInterval(updateChatTime, 60000);
-    } else {
-        clearInterval(chatTimeInterval);
-    }
-}
-
-function sendMessage() {
-    const message = document.getElementById('messageInput').value;
-    const phoneNumber = "+233123456789"; // Replace with Chibsah's WhatsApp number
-    const encodedMessage = encodeURIComponent(message || "Hello Chibsah Farms, I have a question");
-    
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-    toggleChat();
-}
-
-document.addEventListener('click', (e) => {
-    const popup = document.getElementById('chatPopup');
-    const button = document.querySelector('.whatsapp-button');
-    
-    if (!popup.contains(e.target) && !button.contains(e.target) && chatVisible) {
-        toggleChat();
-        clearInterval(chatTimeInterval);
-    }
-});
-</script>
-
-<!-- HTML -->
-<footer class="site-footer">
-    <div class="footer-container">
-        <!-- Left Section: Logo & Social -->
-        <div class="footer-left">
-            <img src="images/logo.png" alt="Chibsah Farms Logo" class="footer-logo">
             <div class="social-links">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-content">
+            <div class="logo">
+              <a href="index.html">
+                <img
+                  src="images/logo.png"
+                  alt="Chibsah Farms Logo"
+                  style="height: 130px"
+                />
+              </a>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#certifications">Quality</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#contact" class="cta-button">Get Quote</a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Poultry Hero Section -->
+    <section class="poultry-hero">
+      <div class="hero-overlay">
+        <h1>Chibsah Premium Poultry</h1>
+        <p>Ghana's Leader in Antibiotic-Free Poultry Production</p>
+        <div class="live-counters">
+          <div class="counter">
+            <i class="fas fa-egg"></i>
+            <span class="count" data-target="85000">0</span>
+            <span>Eggs Daily</span>
+          </div>
+          <div class="counter">
+            <i class="fas fa-drumstick-bite"></i>
+            <span class="count" data-target="12000">0</span>
+            <span>Chickens Weekly</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="product-showcase">
+      <div class="container">
+        <h2>Our Poultry Products</h2>
+        <div class="product-tabs">
+          <button class="tab-btn active" data-tab="eggs">Fresh Eggs</button>
+          <button class="tab-btn" data-tab="meat">Poultry Meat</button>
         </div>
 
-        <!-- Center Sections: Links -->
-        <div class="footer-center">
-            <div class="link-column">
-                <h4>Our Farms</h4>
-                <ul>
-                    <li><a href="grain-farms.html">Grain Farm</a></li>
-                    <li><a href="poultry-farms.html">Poultry Farm</a></li>
-                    <li><a href="avocado-farms.html">Avocado Farm</a></li>
-                    <li><a href="livestock-farms.html">Livestock</a></li>
-                </ul>
+        <div class="tab-content active" id="eggs">
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Organic Eggs"
+                />
+                <div class="product-overlay">
+                  <h3>Nutrition Facts</h3>
+                  <ul class="nutrition-list">
+                    <li>Omega-3: 150mg</li>
+                    <li>Protein: 6g</li>
+                    <li>Vitamin D: 41IU</li>
+                    <li>Antibiotic-Free</li>
+                    <li>Free-Range</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-actions">
+                <button class="quick-order">Quick Order</button>
+                <button class="view-details">View Certifications</button>
+              </div>
             </div>
-            
-            <div class="link-column">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                </ul>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/hatchery.jpg" alt="Egg Crates" />
+                <div class="product-overlay">
+                  <h3>Packaging</h3>
+                  <ul class="nutrition-list">
+                    <li>Eco-Friendly Packaging</li>
+                    <li>30 Eggs per Crate</li>
+                    <li>Recyclable Materials</li>
+                    <li>Secure Transport</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-actions">
+                <button class="quick-order">Bulk Order</button>
+                <button class="view-details">Delivery Options</button>
+              </div>
             </div>
+          </div>
         </div>
 
-        <!-- Right Section: Map -->
-        <div class="footer-right">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.7685312966087!2d-0.13367702656667513!3d5.6011745331969935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf85002c15cbbf%3A0xa1ba040430e91349!2sYAC%20GROUP!5e0!3m2!1sen!2sgh!4v1745158640118!5m2!1sen!2sgh"
-                class="footer-map"
-                allowfullscreen
-                loading="lazy">
-            </iframe>
+        <div class="tab-content" id="meat">
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/poultry-meat.jpg" alt="Fresh Poultry Meat" />
+                <div class="product-overlay">
+                  <h3>Quality Specs</h3>
+                  <ul class="nutrition-list">
+                    <li>Protein: 25g per 100g</li>
+                    <li>Fat Content: 3-5%</li>
+                    <li>Certified Antibiotic-Free</li>
+                    <li>Air-Chilled Processing</li>
+                    <li>Hormone-Free</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-actions">
+                <button class="quick-order">Bulk Order</button>
+                <button class="view-details">Cut Selection</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/poultry-hen.jpg" alt="Chicken Parts" />
+                <div class="product-overlay">
+                  <h3>Available Cuts</h3>
+                  <ul class="nutrition-list">
+                    <li>Whole Chicken</li>
+                    <li>Breast Fillets</li>
+                    <li>Drumsticks</li>
+                    <li>Thighs</li>
+                    <li>Wings</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-actions">
+                <button class="quick-order">Custom Order</button>
+                <button class="view-details">Portion Guide</button>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- Copyright -->
-    <div class="footer-bottom">
-        <p>&copy; 2025 Chibsah Farms | YAC Group Subsidiary</p>
-    </div>
-</footer>
+    <!-- Farming Process -->
+    <section class="poultry-process">
+      <div class="container">
+        <h2>Our 7-Step Ethical Farming Cycle</h2>
+        <div class="process-container">
+          <div class="process-visualization">
+            <div class="circular-diagram">
+              <div class="process-ring"></div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+              <!-- Hatching -->
+              <div
+                class="process-segment active"
+                style="--angle: 0deg"
+                data-step="1"
+              >
+                <div class="segment-content">
+                  <i class="fas fa-egg"></i>
+                  <h3>Hatching</h3>
+                </div>
+              </div>
 
-	</body>
+              <!-- Rearing -->
+              <div
+                class="process-segment"
+                style="--angle: 51.43deg"
+                data-step="2"
+              >
+                <div class="segment-content">
+                  <i class="fas fa-kiwi-bird"></i>
+                  <h3>Free-Range Rearing</h3>
+                </div>
+              </div>
+
+              <!-- Nutrition -->
+              <div
+                class="process-segment"
+                style="--angle: 102.86deg"
+                data-step="3"
+              >
+                <div class="segment-content">
+                  <i class="fas fa-seedling"></i>
+                  <h3>Organic Nutrition</h3>
+                </div>
+              </div>
+
+              <!-- Health -->
+              <div
+                class="process-segment"
+                style="--angle: 154.29deg"
+                data-step="4"
+              >
+                <div class="segment-content">
+                  <i class="fas fa-heartbeat"></i>
+                  <h3>Health Monitoring</h3>
+                </div>
+              </div>
+
+              <!-- Harvesting -->
+              <div
+                class="process-segment"
+                style="--angle: 205.71deg"
+                data-step="5"
+              >
+                <div class="segment-content">
+                  <i class="fas fa-hand-holding-heart"></i>
+                  <h3>Ethical Harvesting</h3>
+                </div>
+              </div>
+
+              <!-- Traceability -->
+              <div
+                class="process-segment"
+                style="--angle: 257.14deg"
+                data-step="6"
+              >
+                <div class="segment-content">
+                  <i class="fas fa-qrcode"></i>
+                  <h3>Full Traceability</h3>
+                </div>
+              </div>
+
+              <!-- Renewal -->
+              <div
+                class="process-segment"
+                style="--angle: 308.57deg"
+                data-step="7"
+              >
+                <div class="segment-content">
+                  <i class="fas fa-recycle"></i>
+                  <h3>Eco-Renewal</h3>
+                </div>
+              </div>
+
+              <div class="process-center pulse">
+                <img src="images/logo.png" alt="Chibsah Farms Seal" />
+              </div>
+            </div>
+
+            <div class="detail-panel active" id="detailPanel">
+              <h3><i class="fas fa-egg"></i> Hatching</h3>
+              <p>
+                Climate-controlled hatcheries with 99% viability rate ensuring
+                healthy chicks from day one.
+              </p>
+              <ul class="detail-list">
+                <li>
+                  24/7 embryo monitoring with temperature and humidity control
+                </li>
+                <li>
+                  ISO-certified incubation processes meeting international
+                  standards
+                </li>
+                <li>Regular health screening and quality checks</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="step-indicators">
+            <div class="step-indicator active" data-step="1"></div>
+            <div class="step-indicator" data-step="2"></div>
+            <div class="step-indicator" data-step="3"></div>
+            <div class="step-indicator" data-step="4"></div>
+            <div class="step-indicator" data-step="5"></div>
+            <div class="step-indicator" data-step="6"></div>
+            <div class="step-indicator" data-step="7"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Gallery -->
+    <section class="poultry-gallery">
+      <div class="container">
+        <h2>Our Facilities</h2>
+        <div class="gallery-container">
+          <div class="gallery-item" data-category="hatchery">
+            <img
+              src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Hatchery"
+            />
+            <div class="gallery-caption">
+              <h3>Modern Hatchery</h3>
+              <button class="virtual-tour">Virtual Tour</button>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="farm">
+            <img src="images/hatchery.jpg" alt="Free Range Farm" />
+            <div class="gallery-caption">
+              <h3>Free-Range Farms</h3>
+              <button class="virtual-tour">Virtual Tour</button>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="processing">
+            <img
+              src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Processing Facility"
+            />
+            <div class="gallery-caption">
+              <h3>Processing Facility</h3>
+              <button class="virtual-tour">Virtual Tour</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Chibsah Farms</h3>
+            <p>
+              Leading sustainable agriculture in Ghana's Ashanti and Eastern
+              Region since 2020. We're committed to providing premium organic
+              products while supporting local communities and preserving our
+              environment.
+            </p>
+            <div class="social-links" style="margin-top: 20px">
+              <a href="#" style="margin-right: 15px; font-size: 1.5rem"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" style="margin-right: 15px; font-size: 1.5rem"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" style="margin-right: 15px; font-size: 1.5rem"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="#" style="margin-right: 15px; font-size: 1.5rem"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Our Products</h3>
+            <ul>
+              <li><a href="#products">Premium Livestock</a></li>
+              <li><a href="#products">Free-Range Poultry</a></li>
+              <li><a href="#products">Omega-3 Eggs</a></li>
+              <li><a href="#products">Organic Avocados</a></li>
+              <li><a href="#products">Ancient Grains</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#products">Our Products</a></li>
+              <li><a href="#certifications">Quality Standards</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#">Farm Tours</a></li>
+              <li><a href="#contact">Wholesale Orders</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Head Office: Tse Addo High
+              Street, Tebibiiano-Accra, Ghana
+            </p>
+            <p><i class="fas fa-phone"></i> +233 24 123 4567</p>
+            <p><i class="fas fa-envelope"></i> info@chibsahfarms.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</p>
+          </div>
+        </div>
+
+        <div class="footer-map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.7685312966087!2d-0.13367702656667513!3d5.6011745331969935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf85002c15cbbf%3A0xa1ba040430e91349!2sYAC%20GROUP!5e0!3m2!1sen!2sgh!4v1745158640118!5m2!1sen!2sgh"
+            width="100%"
+            height="350"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Chibsah Farms. All rights reserved. | Sustainable
+            Agriculture for a Healthier Future
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <button class="whatsapp-button" onclick="openWhatsApp()">
+      <i class="fab fa-whatsapp"></i>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTopBtn"
+      aria-label="Scroll to top"
+      title="Scroll to top"
+    ></button>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const navMenu = document.getElementById("navMenu");
+        const menuToggle = document.querySelector(".mobile-menu-toggle i");
+
+        navMenu.classList.toggle("active");
+
+        if (navMenu.classList.contains("active")) {
+          menuToggle.classList.remove("fa-bars");
+          menuToggle.classList.add("fa-times");
+        } else {
+          menuToggle.classList.remove("fa-times");
+          menuToggle.classList.add("fa-bars");
+        }
+      }
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+
+            // Close mobile menu if open
+            const navMenu = document.getElementById("navMenu");
+            const menuToggle = document.querySelector(".mobile-menu-toggle i");
+            if (navMenu.classList.contains("active")) {
+              navMenu.classList.remove("active");
+              menuToggle.classList.remove("fa-times");
+              menuToggle.classList.add("fa-bars");
+            }
+          }
+        });
+      });
+
+      // Active Navigation Link
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-menu a");
+
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").substring(1) === current) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // WhatsApp Function
+      function openWhatsApp() {
+        const message =
+          "Hello Chibsah Farms, I would like to get more information about your products.";
+        const phoneNumber = "+233241234567";
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+          message
+        )}`;
+        window.open(whatsappURL, "_blank");
+      }
+
+      // Scroll to Top Functionality
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add("visible");
+        } else {
+          scrollToTopBtn.classList.remove("visible");
+        }
+      });
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Process Wheel Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const segments = document.querySelectorAll(".process-segment");
+        const indicators = document.querySelectorAll(".step-indicator");
+        const detailPanel = document.getElementById("detailPanel");
+        const centerCircle = document.querySelector(".process-center");
+
+        // Step details data
+        const stepDetails = {
+          1: {
+            title: "Hatching",
+            icon: "fa-egg",
+            description:
+              "Climate-controlled hatcheries with 99% viability rate ensuring healthy chicks from day one.",
+            details: [
+              "24/7 embryo monitoring with temperature and humidity control",
+              "ISO-certified incubation processes meeting international standards",
+              "Regular health screening and quality checks",
+            ],
+          },
+          2: {
+            title: "Free-Range Rearing",
+            icon: "fa-kiwi-bird",
+            description:
+              "Open-air poultry houses with 1m²/bird space allowing natural behaviors and movement.",
+            details: [
+              "Natural light cycles and ventilation systems",
+              "Predator-proof environments with safety measures",
+              "Enrichment activities to promote natural behaviors",
+            ],
+          },
+          3: {
+            title: "Organic Nutrition",
+            icon: "fa-seedling",
+            description:
+              "Custom-formulated non-GMO feed specifically designed for optimal poultry health.",
+            details: [
+              "21% protein content from sustainable sources",
+              "Herbal growth supplements without antibiotics",
+              "Locally sourced ingredients reducing food miles",
+            ],
+          },
+          4: {
+            title: "Health Monitoring",
+            icon: "fa-heartbeat",
+            description:
+              "Daily welfare checks by veterinarians ensuring the highest standards of animal care.",
+            details: [
+              "Comprehensive vaccination programs",
+              "Stress-reduction protocols and comfortable environments",
+              "Regular health assessments and preventive care",
+            ],
+          },
+          5: {
+            title: "Ethical Harvesting",
+            icon: "fa-hand-holding-heart",
+            description:
+              "Humane processing certified by AWIN ensuring dignity throughout the process.",
+            details: [
+              "Stun-before-processing techniques for zero stress",
+              "Zero-waste practices utilizing all byproducts",
+              "Continuous monitoring by animal welfare officers",
+            ],
+          },
+          6: {
+            title: "Full Traceability",
+            icon: "fa-qrcode",
+            description:
+              "Blockchain-tracked from farm to table providing complete transparency for consumers.",
+            details: [
+              "Unique batch IDs for every product",
+              "Real-time quality logs accessible to customers",
+              "Supply chain transparency from origin to store",
+            ],
+          },
+          7: {
+            title: "Eco-Renewal",
+            icon: "fa-recycle",
+            description:
+              "Closed-loop waste management systems minimizing environmental impact.",
+            details: [
+              "Manure-to-biogas conversion for renewable energy",
+              "Water recycling systems reducing consumption by 70%",
+              "Carbon footprint monitoring and offset programs",
+            ],
+          },
+        };
+
+        // Function to update active step
+        function setActiveStep(stepNumber) {
+          // Remove active class from all segments and indicators
+          segments.forEach((segment) => segment.classList.remove("active"));
+          indicators.forEach((indicator) =>
+            indicator.classList.remove("active")
+          );
+
+          // Add active class to selected segment and indicator
+          document
+            .querySelector(`.process-segment[data-step="${stepNumber}"]`)
+            .classList.add("active");
+          document
+            .querySelector(`.step-indicator[data-step="${stepNumber}"]`)
+            .classList.add("active");
+
+          // Update detail panel
+          const detail = stepDetails[stepNumber];
+          detailPanel.innerHTML = `
+                    <h3><i class="fas ${detail.icon}"></i> ${detail.title}</h3>
+                    <p>${detail.description}</p>
+                    <ul class="detail-list">
+                        ${detail.details
+                          .map((item) => `<li>${item}</li>`)
+                          .join("")}
+                    </ul>
+                `;
+          detailPanel.classList.add("active");
+        }
+
+        // Add click event to segments
+        segments.forEach((segment) => {
+          segment.addEventListener("click", function () {
+            const stepNumber = this.getAttribute("data-step");
+            setActiveStep(stepNumber);
+          });
+        });
+
+        // Add click event to indicators
+        indicators.forEach((indicator) => {
+          indicator.addEventListener("click", function () {
+            const stepNumber = this.getAttribute("data-step");
+            setActiveStep(stepNumber);
+          });
+        });
+
+        // Add hover effect to center circle
+        centerCircle.addEventListener("mouseenter", function () {
+          this.classList.remove("pulse");
+        });
+
+        centerCircle.addEventListener("mouseleave", function () {
+          this.classList.add("pulse");
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll(".count");
+        const speed = 200;
+
+        counters.forEach((counter) => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText;
+          const increment = Math.ceil(target / speed);
+
+          if (count < target) {
+            const updateCount = () => {
+              const currentCount = +counter.innerText;
+              if (currentCount < target) {
+                counter.innerText = Math.min(currentCount + increment, target);
+                setTimeout(updateCount, 1);
+              }
+            };
+            updateCount();
+          }
+        });
+
+        // Tab functionality
+        const tabBtns = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            // Remove active class from all buttons and contents
+            tabBtns.forEach((b) => b.classList.remove("active"));
+            tabContents.forEach((c) => c.classList.remove("active"));
+
+            // Add active class to clicked button
+            btn.classList.add("active");
+
+            // Show corresponding content
+            const tabId = btn.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active");
+          });
+        });
+
+        // Gallery item hover effect
+        const galleryItems = document.querySelectorAll(".gallery-item");
+
+        galleryItems.forEach((item) => {
+          item.addEventListener("mouseenter", () => {
+            galleryItems.forEach((i) => {
+              if (i !== item) {
+                i.style.opacity = "0.8";
+              }
+            });
+          });
+
+          item.addEventListener("mouseleave", () => {
+            galleryItems.forEach((i) => {
+              i.style.opacity = "1";
+            });
+          });
+        });
+      });
+    </script>
+  </body>
 </html>

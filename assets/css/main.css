@@ -94,7 +94,7 @@ video {
   vertical-align: baseline;
 } */
 
-article,
+/* article,
 aside,
 details,
 figcaption,
@@ -106,7 +106,7 @@ menu,
 nav,
 section {
   display: block;
-}
+} */
 
 /* Adjust logo size */
 /* .logo img {
@@ -121,9 +121,9 @@ section {
   z-index: 1001;
 }
 
-body {
+/* body {
   line-height: 1;
-}
+} */
 
 /* ol,
 ul {
@@ -147,9 +147,9 @@ table {
   border-spacing: 0;
 }
 
-body {
+/* body {
   -webkit-text-size-adjust: none;
-}
+} */
 
 mark {
   background-color: transparent;
@@ -190,11 +190,11 @@ html {
   box-sizing: border-box;
 }
 
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
+} */
 
 body {
   background: #ffffff;
@@ -251,7 +251,7 @@ textarea {
   }
 }
 
-a {
+/* a {
   -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   -webkit-transition: color 0.2s ease-in-out,
     border-bottom-color 0.2s ease-in-out;
@@ -260,7 +260,7 @@ a {
   border-bottom: dotted 1px;
   color: #f56a6a;
   text-decoration: none;
-}
+} */
 a:hover {
   border-bottom-color: #f56a6a;
   color: #f56a6a !important;
@@ -3075,11 +3075,11 @@ button:disabled,
   border-bottom: 2px solid #e0e0e0;
 }
 
-.container {
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
+} */
 
 .partners-banner h3 {
   text-align: center;
@@ -4777,7 +4777,7 @@ img {
   border-radius: 12px;
 }
 
-.cta-button {
+/* .cta-button {
   background: #6b8c42;
   color: white;
   padding: 1rem 2rem;
@@ -4785,7 +4785,7 @@ img {
   border-radius: 8px;
   font-size: 1.1rem;
   cursor: pointer;
-}
+} */
 
 /* Images on Avocado*/
 .features-grid {
