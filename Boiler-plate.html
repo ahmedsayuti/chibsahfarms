@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chibsah Farms - Premium organic livestock, poultry, avocados, and grains from Ghana's Ashanti Region. Sustainable agriculture for a healthier future."
+    />
+    <meta
+      name="keywords"
+      content="organic farming, Ghana agriculture, livestock, poultry, avocado, grains, sustainable farming, Ashanti Region"
+    />
+    <title>Chibsah Farms</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+        background: linear-gradient(45deg, #f8faf5 0%, #ffffff 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content-placeholder {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .content-placeholder h1 {
+        font-size: 2.5rem;
+        color: #2d5016;
+        margin-bottom: 1.5rem;
+      }
+
+      .content-placeholder p {
+        font-size: 1.2rem;
+        color: #666;
+        max-width: 600px;
+        margin-bottom: 2rem;
+      }
+
+      .placeholder-graphic {
+        width: 300px;
+        height: 200px;
+        margin: 2rem auto;
+        background: linear-gradient(135deg, #7ed321 0%, #4a7c27 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 4rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header Styles */
+      header {
+        background: linear-gradient(135deg, #828580 0%, #4a7c27 100%);
+        color: rgb(47, 47, 47);
+        position: relative;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.427);
+      }
+
+      .top-bar {
+        background: rgba(70, 104, 88, 0.2);
+        padding: 8px 0;
+        font-size: 0.9rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .top-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .contact-info {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .contact-info span {
+        /* display: flex; */
+        align-items: center;
+        gap: 8px;
+      }
+      /* Contact Section */
+      .contact {
+        padding: 100px 0;
+        background: #f8faf5;
+      }
+
+      .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        margin-top: 60px;
+      }
+
+      .contact-info {
+        padding: 10px;
+        background: rgb(200, 219, 181);
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 25px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .contact-item:last-child {
+        border-bottom: none;
+      }
+
+      .contact-item i {
+        font-size: 1.5rem;
+        color: #7ed321;
+        margin-top: 5px;
+      }
+
+      .contact-details h4 {
+        color: #2d5016;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+      }
+
+      .contact-details p {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .contact-form {
+        padding: 40px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        margin-left: 15px;
+        transition: color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #7ed321;
+      }
+
+      .navbar {
+        padding: 1px 0;
+      }
+
+      .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo img {
+        height: 130px;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .nav-menu a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .nav-menu a:hover,
+      .nav-menu a.active {
+        color: #7ed321;
+      }
+
+      .nav-menu a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #7ed321;
+        transition: width 0.3s ease;
+      }
+
+      .nav-menu a:hover::after {
+        width: 100%;
+      }
+
+      .cta-button {
+        background: #7ed321;
+        color: #2d5016;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(126, 211, 33, 0.3);
+      }
+
+      .cta-button:hover {
+        background: #6bc91a;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(126, 211, 33, 0.4);
+      }
+
+      .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Footer */
+      footer {
+        background: #1a2f0f;
+        color: white;
+        padding: 60px 0 30px;
+        margin-top: auto;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-section h3 {
+        color: #7ed321;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+      }
+
+      .footer-section p,
+      .footer-section li {
+        color: #ccc;
+        line-height: 1.7;
+        margin-bottom: 10px;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section a:hover {
+        color: #7ed321;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid #333;
+        color: #888;
+      }
+
+      /* WhatsApp Button Styles */
+      .whatsapp-button {
+        position: fixed;
+        bottom: 70px;
+        right: 50px;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+      }
+
+      .whatsapp-button i {
+        color: white;
+        font-size: 32px;
+      }
+
+      .whatsapp-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+      }
+
+      /* Scroll to Top Button Styles */
+      .scroll-to-top {
+        position: fixed;
+        bottom: 15px;
+        right: 54px;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #59638b 0%, #175133 100%);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px) scale(0.8);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+      }
+
+      .scroll-to-top::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 12px solid white;
+        transition: transform 0.3s ease;
+      }
+
+      /* Show button when scrolled */
+      .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+      }
+
+      /* Hover effects */
+      .scroll-to-top:hover {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+        transform: translateY(-2px) scale(1.05);
+      }
+
+      .scroll-to-top:hover::before {
+        transform: translateY(-2px);
+      }
+
+      /* Footer Map */
+      .footer-map-wrapper {
+        margin: 40px 0;
+      }
+
+      .footer-map-wrapper iframe {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 15px;
+        }
+
+        .top-bar-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 10px;
+        }
+
+        .contact-info {
+          justify-content: center;
+          gap: 15px;
+        }
+
+        .nav-content {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          gap: 15px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .mobile-menu-toggle {
+          display: block;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .whatsapp-button {
+          bottom: 20px;
+          right: 20px;
+          width: 50px;
+          height: 50px;
+        }
+
+        .whatsapp-button i {
+          font-size: 24px;
+        }
+
+        .scroll-to-top {
+          bottom: 20px;
+          right: 20px;
+          width: 45px;
+          height: 45px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .contact-info {
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .contact-info span {
+          justify-content: center;
+        }
+
+        .logo img {
+          height: 100px;
+        }
+
+        .content-placeholder h1 {
+          font-size: 2rem;
+        }
+
+        .content-placeholder p {
+          font-size: 1rem;
+        }
+
+        .placeholder-graphic {
+          width: 250px;
+          height: 150px;
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="top-bar">
+        <div class="container">
+          <div class="top-bar-content">
+            <div class="contact-info">
+              <span><i class="fas fa-phone"></i> +233 54 152 1002</span>
+              <span><i class="fas fa-envelope"></i> info@chibsahfarms.com</span>
+              <span
+                ><i class="fas fa-map-marker-alt"></i> Head Office: Tse Addo
+                High Street, Tebibiiano-Accra, Ghana</span
+              >
+            </div>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-content">
+            <div class="logo">
+              <a href="index.html">
+                <img
+                  src="images/logo.png"
+                  alt="Chibsah Farms Logo"
+                  style="height: 130px"
+                />
+              </a>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+              <li><a href="#home" class="active">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#certifications">Quality</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#contact" class="cta-button">Get Quote</a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Content Placeholder -->
+    <div class="content-placeholder">
+      <h1>Chibsah Farms</h1>
+      <p>Sustainable Agriculture for a Healthier Future</p>
+      <div class="placeholder-graphic">
+        <i class="fas fa-leaf"></i>
+      </div>
+      <p>
+        This area is for page content. The header and footer have been extracted
+        from the original design.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Chibsah Farms</h3>
+            <p>
+              Leading sustainable agriculture in Ghana's Ashanti and Eastern
+              Region since 2020. We're committed to providing premium organic
+              products while supporting local communities and preserving our
+              environment.
+            </p>
+            <div class="social-links" style="margin-top: 20px">
+              <a href="#" style="margin-right: 15px; font-size: 1.5rem"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" style="margin-right: 15px; font-size: 1.5rem"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" style="margin-right: 15px; font-size: 1.5rem"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="#" style="margin-right: 15px; font-size: 1.5rem"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Our Products</h3>
+            <ul>
+              <li><a href="#products">Premium Livestock</a></li>
+              <li><a href="#products">Free-Range Poultry</a></li>
+              <li><a href="#products">Omega-3 Eggs</a></li>
+              <li><a href="#products">Organic Avocados</a></li>
+              <li><a href="#products">Ancient Grains</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">Our Products</a></li>
+              <li><a href="about.html">Quality Standards</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="about.html">Farm Tours</a></li>
+              <li><a href="contact.html">Wholesale Orders</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Head Office: Tse Addo High
+              Street, Tebibiiano-Accra, Ghana
+            </p>
+            <p><i class="fas fa-phone"></i> +233 54 152 1002</p>
+            <p><i class="fas fa-envelope"></i> info@chibsahfarms.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</p>
+          </div>
+        </div>
+
+        <div class="footer-map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.7685312966087!2d-0.13367702656667513!3d5.6011745331969935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf85002c15cbbf%3A0xa1ba040430e91349!2sYAC%20GROUP!5e0!3m2!1sen!2sgh!4v1745158640118!5m2!1sen!2sgh"
+            width="100%"
+            height="350"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Chibsah Farms. All rights reserved. | Sustainable
+            Agriculture for a Healthier Future
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <button class="whatsapp-button" onclick="openWhatsApp()">
+      <i class="fab fa-whatsapp"></i>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTopBtn"
+      aria-label="Scroll to top"
+      title="Scroll to top"
+    ></button>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const navMenu = document.getElementById("navMenu");
+        const menuToggle = document.querySelector(".mobile-menu-toggle i");
+
+        navMenu.classList.toggle("active");
+
+        if (navMenu.classList.contains("active")) {
+          menuToggle.classList.remove("fa-bars");
+          menuToggle.classList.add("fa-times");
+        } else {
+          menuToggle.classList.remove("fa-times");
+          menuToggle.classList.add("fa-bars");
+        }
+      }
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+
+            // Close mobile menu if open
+            const navMenu = document.getElementById("navMenu");
+            const menuToggle = document.querySelector(".mobile-menu-toggle i");
+            if (navMenu.classList.contains("active")) {
+              navMenu.classList.remove("active");
+              menuToggle.classList.remove("fa-times");
+              menuToggle.classList.add("fa-bars");
+            }
+          }
+        });
+      });
+
+      // Active Navigation Link
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-menu a");
+
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").substring(1) === current) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // WhatsApp Function
+      function openWhatsApp() {
+        const message =
+          "Hello Chibsah Farms, I would like to get more information about your products.";
+        const phoneNumber = "+233541521002";
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+          message
+        )}`;
+        window.open(whatsappURL, "_blank");
+      }
+
+      // Scroll to Top Functionality
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add("visible");
+        } else {
+          scrollToTopBtn.classList.remove("visible");
+        }
+      });
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
